@@ -10,7 +10,7 @@ export default function Header() {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header">header</header>
+      <header className="h-header z-10">header</header>
     </>
   )
 }
