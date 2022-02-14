@@ -12,6 +12,13 @@ module.exports = {
       light: 'white',
       primary: '#01559A',
       accent: '#D25C78',
+      stone: '#e7e5e4',
+      rose: '#fb7185',
+      cyan: {
+        600: '#0891b2',
+        500: '#06b6d4',
+        100: '#cffafe',
+      },
     },
     extend: {
       height: { header: '95px' },
