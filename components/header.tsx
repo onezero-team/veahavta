@@ -10,7 +10,11 @@ export default function Header() {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10">header</header>
+      <header className="h-header z-10 pt-4 px-4">
+        <div className="mx-auto max-w-screen-lg p-4 md:px-8 bg-light rounded-lg">
+          header
+        </div>
+      </header>
     </>
   )
 }

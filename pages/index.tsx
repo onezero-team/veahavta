@@ -1,37 +1,60 @@
 import { Button } from '@/components/button'
 import { fixCMSLocale } from '@/lib/hooks'
+import { Common, COMMON_QUERY_STRING } from '@/lib/interface'
 import themePreval from '@/lib/theme.preval'
 import { NextPageContext } from 'next'
 import { PageHeader } from '../components/text'
 import { request } from '../lib/datocms'
 
 type PageType = {
-  data: Data
-}
-
-type Data = {
-  homepage: Homepage
-  common: Common
+  data: {
+    homepage: Homepage
+    common: Common
+  }
 }
 
 type Homepage = {
   title: string
+  description: string
+  getToKnowUsButton: string
+  aboutHeading: string
   aboutTitle: string
-}
-
-type Common = {
-  email: string
+  aboutUsText: string
+  aboutUsButton: string
+  whatWeDoHeading: string
+  whatWeDoTitle: string
+  whatWeDoCards: Array<{
+    title: string
+    text: string
+    imagePath: string
+  }>
+  contactUsHeading: string
+  contactUsTitle: string
+  contactUsText: string
 }
 
 const HOMEPAGE_QUERY = (locale: string) => `
 query Homepage {
   homepage(locale: ${locale}) {
     title
+    description
+    getToKnowUsButton
+    aboutHeading
     aboutTitle
+    aboutUsText
+    aboutUsButton
+    whatWeDoHeading
+    whatWeDoTitle
+    whatWeDoCards {
+      title
+      text
+      imagePath
+    }
+    contactUsHeading
+    contactUsTitle
+    contactUsText
   }
-  common {
-    email
-  }
+  ${COMMON_QUERY_STRING}
 }
 `
 
@@ -63,7 +86,8 @@ const Banner = ({ data }: PageType) => {
       <div className="wrapper min-h-screen-50">
         <div className="background"></div>
         <PageHeader>{data.homepage.title}</PageHeader>
-        <Button>Click</Button>
+        <p>{data.homepage.description}</p>
+        <Button>{data.homepage.getToKnowUsButton}</Button>
       </div>
       <style jsx>{`
         div.wrapper {
@@ -89,7 +113,14 @@ const Banner = ({ data }: PageType) => {
 const AboutTheClinic = ({ data }: PageType) => {
   return (
     <>
-      <h2>{data.homepage.aboutTitle}</h2>
+      <h2 className="text-lg">
+        <span className="text-md text-accent">
+          {data.homepage.aboutHeading}
+        </span>
+        {data.homepage.aboutTitle}
+      </h2>
+      <p>{data.homepage.aboutTitle}</p>
+      <Button>{data.homepage.aboutUsButton}</Button>
     </>
   )
 }
@@ -99,7 +130,13 @@ const WhatWeDo = ({ data }: PageType) => {
 const ContactUs = ({ data }: PageType) => {
   return (
     <>
-      <a href={`mailto:${data.common.email}`}>{data.common.email}</a>
+      <h2>{data.homepage.contactUsHeading}</h2>
+      <a
+        type={data.common.contactUsLinks[0].linkType}
+        href={`mailto:${data.common.contactUsLinks[0].text}`}
+      >
+        {data.common.contactUsLinks[0].text}
+      </a>
     </>
   )
 }
