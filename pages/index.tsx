@@ -1,5 +1,4 @@
 import { Button } from '@/components/button'
-import { fixCMSLocale } from '@/lib/hooks'
 import { Common, COMMON_QUERY_STRING } from '@/lib/interface'
 import themePreval from '@/lib/theme.preval'
 import { NextPageContext } from 'next'
@@ -59,7 +58,6 @@ query Homepage {
 `
 
 export async function getStaticProps({ locale }: NextPageContext) {
-  locale = fixCMSLocale(locale)
   const data = await request({
     query: HOMEPAGE_QUERY(locale as string),
   })
