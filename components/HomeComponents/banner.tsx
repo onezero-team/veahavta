@@ -8,7 +8,7 @@ export default function Banner({ data }: PageType) {
   return (
     <>
       <div className="wrapper min-h-screen-50">
-        <div className="text-center">
+        <div className="grid place-items-center">
           <div className="background"></div>
           <PageHeader>{data.homepage.title}</PageHeader>
           <p className="text-2xl ">{data.homepage.description.slice(0, 40)}</p>
