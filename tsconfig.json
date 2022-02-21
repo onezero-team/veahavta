@@ -25,7 +25,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/HomeComponents"
-, "components/card.tsx"  ],
+    "components/HomeComponents",
+    "components/card.tsx"
+  ],
   "exclude": ["node_modules"]
 }
