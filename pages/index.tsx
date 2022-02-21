@@ -1,5 +1,4 @@
 import { PageType } from '../components/Types'
-import { fixCMSLocale } from '@/lib/hooks'
 import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
 import Banner from '../components/HomeComponents/banner'
@@ -9,7 +8,6 @@ import ContactUs from '../components/HomeComponents/contact-us'
 import { HOMEPAGE_QUERY } from '../components/Types'
 
 export async function getStaticProps({ locale }: NextPageContext) {
-  locale = fixCMSLocale(locale)
   const data = await request({
     query: HOMEPAGE_QUERY(locale as string),
   })

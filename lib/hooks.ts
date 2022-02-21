@@ -9,6 +9,3 @@ export function useLocale() {
   const dir: 'rtl' | 'ltr' = ['he', 'ar'].includes(locale) ? 'rtl' : 'ltr'
   return { router, dir, locale }
 }
-
-export const fixCMSLocale = (locale: string | undefined) =>
-  locale === 'he' ? 'heb' : locale
