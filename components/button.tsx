@@ -7,7 +7,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      className={`font-bold bg-primary text-light px-8 py-2 rounded-full ${className}`}
+      className={`text-2xl font-bold bg-primary text-light px-8 py-2 rounded-full m-12 ${className}`}
     >
       {children}
     </button>

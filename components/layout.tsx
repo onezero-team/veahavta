@@ -9,8 +9,8 @@ export default function Layout({ children, pageProps }: any) {
   const { dir, locale } = useLocale()
   return (
     <>
-      <div className="app-wrapper" dir={dir}>
-        <Header />
+      <div className="app-wrapper font-['Assistant']" dir={dir}>
+        <Header locale={locale} />
         <Main>{children}</Main>
         <Footer />
       </div>
