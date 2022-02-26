@@ -17,10 +17,13 @@ export default function ContactData({
     Type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
   return (
-    <a type={linkType} href={`${Type}`} className="flex flex-row justify-self-start p-2">
+    <a
+      type={linkType}
+      href={`${Type}`}
+      className="flex flex-row justify-self-start p-2"
+    >
       <div className="w-5 h-5 bg-primary"></div>
       {text}
     </a>
-
   )
 }

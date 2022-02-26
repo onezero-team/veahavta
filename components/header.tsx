@@ -5,9 +5,7 @@ import { Button } from './button'
 import { ChangeLangButton } from './changeLangButton'
 import { NextRouter, useRouter } from 'next/router'
 
-
 export default function Header({ locale }: { locale: string }) {
-  
   const [headerLinks, setHeader] = useState([
     'בית',
     'אודות המרפאה',
@@ -16,7 +14,12 @@ export default function Header({ locale }: { locale: string }) {
   ]) // set by default to heb
 
   const hebHeaderLinks = ['בית', 'אודות המרפאה', 'צרו קשר', 'תמכו בנו']
-  const engHeaderLinks = ['Home', 'About the clinic', 'Contact us', 'Support us']
+  const engHeaderLinks = [
+    'Home',
+    'About the clinic',
+    'Contact us',
+    'Support us',
+  ]
   const { dir } = useLocale()
   switch (locale) {
     case 'he': {
@@ -24,11 +27,11 @@ export default function Header({ locale }: { locale: string }) {
       break
     }
     case 'eng': {
-      setHeader(engHeaderLinks);
-      break;
+      setHeader(engHeaderLinks)
+      break
     }
     default:
-      break;
+      break
   }
   return (
     <>
@@ -51,9 +54,16 @@ export default function Header({ locale }: { locale: string }) {
               })}
             </div>
             <div className="grid grid-cols-4 justify-self-end col-span-2">
-              <li><ChangeLangButton className="ml-2" lang='en' >en</ChangeLangButton></li>
-              <li><ChangeLangButton className="ml-2" lang='he' >he</ChangeLangButton></li>
-         
+              <li>
+                <ChangeLangButton className="ml-2" lang="en">
+                  en
+                </ChangeLangButton>
+              </li>
+              <li>
+                <ChangeLangButton className="ml-2" lang="he">
+                  he
+                </ChangeLangButton>
+              </li>
             </div>
           </ul>
         </div>
@@ -61,4 +71,3 @@ export default function Header({ locale }: { locale: string }) {
     </>
   )
 }
-

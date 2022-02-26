@@ -11,17 +11,24 @@ export default function ContactUs({ data }: PageType) {
         {/* change hirght of the section */}
         <div className="grid ">
           <div className="w-8/12">
-            <Button className={'text-3xl bg-[#FFFFFF] text-[#4E47F9] px-8 py-2 rounded-full mb-5 font-bold'}>{data.homepage.contactUsHeading}</Button>
+            <Button
+              className={
+                'text-3xl bg-[#FFFFFF] text-[#4E47F9] px-8 py-2 rounded-full mb-5 font-bold'
+              }
+            >
+              {data.homepage.contactUsHeading}
+            </Button>
             <h2 className="text-4xl font-bold">
               {data.homepage.contactUsTitle}
             </h2>
             <p className="">{data.homepage.contactUsText}</p>
-
           </div>
           <div className="mt-11 grid grid-cols-2 place-items-center">
             {data.common.contactUsLinks.map((i, key) => {
               return (
-                <ContactData linkType={i.linkType} text={i.text}
+                <ContactData
+                  linkType={i.linkType}
+                  text={i.text}
                   imagePath={i.imagePath}
                   key={key}
                 />
@@ -29,9 +36,8 @@ export default function ContactUs({ data }: PageType) {
             })}
           </div>
         </div>
-        
-          <SignupForm data={data}></SignupForm>
-        
+
+        <SignupForm data={data}></SignupForm>
       </section>
     </>
   )
