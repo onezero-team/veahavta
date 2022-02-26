@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 
 export default function ContactData({
@@ -16,11 +17,10 @@ export default function ContactData({
     Type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
   return (
-    <div className="grid grid-cols-2 p-4 ">
-      <div className="w-5 h-5 bg-emerald-800 "></div>
-      <a type={linkType} href={`${Type}`}>
-        {text}
-      </a>
-    </div>
+    <a type={linkType} href={`${Type}`} className="flex flex-row justify-self-start p-2">
+      <div className="w-5 h-5 bg-primary"></div>
+      {text}
+    </a>
+
   )
 }

@@ -13,8 +13,8 @@ export default function WhatWeDo({ data }: PageType) {
         <h1 className="text-[82px] text-center">
           {data.homepage.whatWeDoTitle}
         </h1>
-        <div className="w-9/12">
-          <div className="grid grid-cols-4">
+     
+          <div className="w-8/12 h-6/6 grid grid-cols-4 place-items-center">
             {data.homepage.whatWeDoCards.map((card, i) => {
               return (
                 <Card
@@ -26,7 +26,7 @@ export default function WhatWeDo({ data }: PageType) {
               )
             })}
           </div>
-        </div>
+       
       </section>
     </>
   )

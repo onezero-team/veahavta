@@ -16,7 +16,7 @@ export default function AboutTheClinic({ data }: PageType) {
             </a>
             <h2 className="text-5xl font-bold">{data.homepage.aboutTitle}</h2>
             <p className="text-lg pt-3">{data.homepage.aboutUsText}</p>
-            <Button>{data.homepage.aboutUsButton}</Button>
+            <Button className={'text-2xl font-bold bg-primary text-light px-8 py-2 rounded-full m-12 font-bold'}>{data.homepage.aboutUsButton}</Button>
           </div>
         </div>
       </section>

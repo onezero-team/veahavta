@@ -13,7 +13,7 @@ export default function Banner({ data }: PageType) {
           <PageHeader>{data.homepage.title}</PageHeader>
           <p className="text-2xl ">{data.homepage.description.slice(0, 40)}</p>
           <p className="text-2xl">{data.homepage.description.slice(40)}</p>
-          <Button>{data.homepage.getToKnowUsButton}</Button>
+          <Button className={'text-2xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full m-12 font-bold'}>{data.homepage.getToKnowUsButton}</Button>
         </div>
       </div>
       <style jsx>{`

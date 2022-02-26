@@ -12,7 +12,7 @@ export default function Layout({ children, pageProps }: any) {
       <div className="app-wrapper font-['Assistant']" dir={dir}>
         <Header locale={locale} />
         <Main>{children}</Main>
-        <Footer />
+        <Footer data={children.props.data} />
       </div>
       <style jsx global>
         {`
