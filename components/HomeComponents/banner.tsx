@@ -11,7 +11,9 @@ export default function Banner({ data }: PageType) {
         <div className="grid place-items-center">
           <div className="background"></div>
           <PageHeader>{data.homepage.title}</PageHeader>
-          <p className="text-xl text-center w-7/12 md:4/12 md:text-2xl">{data.homepage.description}</p>
+          <p className="text-xl text-center w-7/12 md:4/12 md:text-2xl">
+            {data.homepage.description}
+          </p>
           {/* <p className="text-2xl">{data.homepage.description.slice(40)}</p> */}
           <Button
             className={

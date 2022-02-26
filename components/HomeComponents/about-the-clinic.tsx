@@ -11,10 +11,15 @@ export default function AboutTheClinic({ data }: PageType) {
 
         <div className="grid place-items-center md:place-items-start">
           <div className="w-7/12 md:p-6 md:pt-8 grid">
-            <a href="#" className="text-right text-2xl md:text-3xl git config text-[#4E47F9]">
+            <a
+              href="#"
+              className="text-right text-2xl md:text-3xl git config text-[#4E47F9]"
+            >
               {data.homepage.aboutHeading}
             </a>
-            <h2 className="text-2xl md:text-5xl font-bold">{data.homepage.aboutTitle}</h2>
+            <h2 className="text-2xl md:text-5xl font-bold">
+              {data.homepage.aboutTitle}
+            </h2>
             <p className="text-lg pt-3">{data.homepage.aboutUsText}</p>
             <div className="justify-self-center md:justify-self-start">
               <Button
