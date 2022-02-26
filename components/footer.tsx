@@ -5,7 +5,8 @@ import ContactData from '@/components/contactdata'
 
 export default function Footer({ data }: PageType) {
   return (
-    <footer className="bg-light px-4 py-8 md:p-16 grid grid-cols-4">
+    <div className="hidden md:block">
+    <footer className="bg-light px-4 py-8 p-16 grid grid-cols-4 ">
       <div>icon</div>
       <div className="w-4/12 justify-self-center">
         <Button
@@ -38,5 +39,6 @@ export default function Footer({ data }: PageType) {
         })}
       </div>
     </footer>
+    </div>
   )
 }

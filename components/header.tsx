@@ -40,7 +40,7 @@ export default function Header({ locale }: { locale: string }) {
         dir={dir}
         className={'bg-light text-primary'}
       />
-      <header className="h-header z-10 pt-4 px-4">
+      <header className="h-header z-10 pt-4 px-4 hidden md:block">
         <div className="mx-auto max-w-screen-lg p-4 md:px-8 bg-light rounded-lg">
           <ul className="grid grid-cols-6">
             <div className="grid grid-cols-5 col-span-4">

@@ -11,11 +11,11 @@ export default function Banner({ data }: PageType) {
         <div className="grid place-items-center">
           <div className="background"></div>
           <PageHeader>{data.homepage.title}</PageHeader>
-          <p className="text-2xl ">{data.homepage.description.slice(0, 40)}</p>
-          <p className="text-2xl">{data.homepage.description.slice(40)}</p>
+          <p className="text-xl text-center w-7/12 md:4/12 md:text-2xl">{data.homepage.description}</p>
+          {/* <p className="text-2xl">{data.homepage.description.slice(40)}</p> */}
           <Button
             className={
-              'text-2xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full m-12 font-bold'
+              'text-xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
             }
           >
             {data.homepage.getToKnowUsButton}

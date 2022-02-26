@@ -76,7 +76,7 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="left-[180px] h-3/5 grid p-4 justify-items-center text-3xl font-bold bg-[#FFFFFF] border border-[#FFFFFF]
+      className="left-[180px] grid p-4 justify-items-center text-3xl font-bold bg-[#FFFFFF] border border-[#FFFFFF] mt-16 md:mt-0
         shadow-[0px_0px_4px_rgba(0,0,0,0.25)] box-border boreder-solid rounded-3xl "
     >
       <div className="w-11/12">
