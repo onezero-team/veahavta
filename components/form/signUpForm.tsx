@@ -68,7 +68,7 @@ export default function SignupForm({ data }: PageType) {
             (phoneError ? `phone: ${phoneError}` : ''),
         )
       } else {
-        alert('Succes!' + values)
+        alert('Form submitted successfully !')
       }
     },
   })
@@ -76,7 +76,7 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="left-[180px] grid p-4 justify-items-center text-3xl font-bold bg-[#FFFFFF] border border-[#FFFFFF] mt-16 md:mt-0
+      className="md:absolute md:-top-24 left-[180px] grid p-2 justify-items-center text-3xl font-bold bg-[#FFFFFF] border border-[#FFFFFF] mt-16 md:mt-0
         shadow-[0px_0px_4px_rgba(0,0,0,0.25)] box-border boreder-solid rounded-3xl "
     >
       <div className="w-11/12">
@@ -163,7 +163,7 @@ export default function SignupForm({ data }: PageType) {
         </div>
         <Button
           className={
-            'text-2xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full mt-10 font-bold'
+            'text-2xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
           }
           type="submit"
         >

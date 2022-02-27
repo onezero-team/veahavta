@@ -7,9 +7,9 @@ import SignupForm from '../form/signUpForm'
 export default function ContactUs({ data }: PageType) {
   return (
     <>
-      <section className="grid md:grid-cols-2 place-items-center mt-32 md:mt-64 bg-[#F4F3FD]">
-        {/* change hirght of the section */}
-        <div className="grid ">
+      <section className=" mt-32 md:mt-64 ">
+        <div id="contactUsItems" className="grid md:grid-cols-2 place-items-center bg-[#F4F3FD] md:h-[600px] relative">
+        <div className="grid">
           <div className="w-8/12 p-2 md:p-0">
             <Button
               className={
@@ -36,8 +36,8 @@ export default function ContactUs({ data }: PageType) {
             })}
           </div>
         </div>
-
         <SignupForm data={data}></SignupForm>
+        </div>
       </section>
     </>
   )
