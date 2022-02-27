@@ -11,13 +11,12 @@ export default function Card({
 }) {
   return (
     <div
-      className="w-11/12 mt-14 border border-[#FFFFFF]
-    shadow-[0px_0px_4px_rgba(0,0,0,0.25)] box-border boreder-solid rounded-3xl h-96"
+      className="w-11/12 mt-14 shadow-4xl box-border rounded-3xl h-96"
     >
       <div className="h-1/2 ">{imagePath}</div>
       <div className="grid place-items-center">
         <div className="w-11/12 ">
-          <h2 className="text-2xl text-[#4E47F9] font-bold md:text-3xl">
+          <h2 className="text-2xl text-header-blue font-bold md:text-3xl">
             {title}
           </h2>
           <p className="break-normal text-clip overflow-hidden ...">{text}</p>

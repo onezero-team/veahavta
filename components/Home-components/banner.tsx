@@ -1,7 +1,7 @@
 import React from 'react'
-import { PageType } from '../Types'
-import { PageHeader } from '../dataComponents/headerText'
-import { Button } from '../dataComponents/button'
+import { PageType } from '../types'
+import { PageHeader } from '../data-components/header-text'
+import { Button } from '../data-components/button'
 import themePreval from '@/lib/theme.preval'
 
 export default function Banner({ data }: PageType) {
@@ -17,7 +17,7 @@ export default function Banner({ data }: PageType) {
           {/* <p className="text-2xl">{data.homepage.description.slice(40)}</p> */}
           <Button
             className={
-              'text-xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
+              'text-xl font-bold bg-header-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
             }
           >
             {data.homepage.getToKnowUsButton}

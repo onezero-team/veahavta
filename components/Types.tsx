@@ -25,12 +25,27 @@ export type Common = {
     linkType: string
     imagePath: string
   }>
-  contactUsFormFirstName: string
+  appLinks: Array<{
+    text: string
+    relativeLink:string
+  }>
+  languageNames: Array<{
+    he: string
+    en: string
+    ar: string
+    am: string
+    ti: string
+  }>
+   contactUsFormFirstName: string
   contactUsFormLastName: string
   contactUsFormEmail: string
   contactUsFormPhone: string
   contactUsFormMessage: string
   contactUsFormSendButton: string
+  footerMenuTitle: string
+  footerContactUsTitle: string
+  footerScheduleButton: string
+  footerSupportUsButton: string
 }
 
 export type PageType = {

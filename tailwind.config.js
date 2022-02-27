@@ -14,6 +14,13 @@ module.exports = {
       accent: '#D25C78',
     },
     extend: {
+      colors:{
+        'header-blue' : '#4E47F9',
+        'contact-bg': '#F4F3FD',
+      },
+      boxShadow: {
+        '4xl': '0px 0px 4px rgba(0,0,0,0.25)'
+      },
       height: { header: '95px' },
       minHeight: {
         'screen-50': '50vh',

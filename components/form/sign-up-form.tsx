@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFormik, Field } from 'formik'
-import { Button } from '../dataComponents/button'
-import { PageType } from '../Types'
+import { Button } from '../data-components/button'
+import { PageType } from '../types'
 
 function validateForm(values: {
   firstName: any
@@ -40,8 +40,7 @@ function validateForm(values: {
 
 export default function SignupForm({ data }: PageType) {
   const dir = data.homepage.aboutTitle.includes('b') ? 'right-40' : 'left-40'
-  console.log(dir)
-  const formik = useFormik({
+    const formik = useFormik({
     initialValues: {
       firstName: '',
       lastName: '',
@@ -74,10 +73,10 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className={`mt-12 md:mt-0 grid p-2 justify-items-center text-3xl font-bold bg-[#FFFFFF] border border-[#FFFFFF] mt-16
-      md:absolute md:-top-20 md:w-2/5 
+      className={`mt-12 grid p-2 justify-items-center text-3xl font-bold bg-light
+      md:absolute md:-top-20 md:w-2/5 md:mt-0
        lg:absolute lg:-top-24 lg:w-2/5 
-        shadow-[0px_0px_4px_rgba(0,0,0,0.25)] box-border boreder-solid rounded-3xl md:${dir} lg:${dir}`}
+        shadow-4xl box-border border-solid rounded-3xl md:${dir} lg:${dir}`}
     >
       <div className="w-11/12">
         <div className="grid grid-cols-2 ">
@@ -92,7 +91,7 @@ export default function SignupForm({ data }: PageType) {
               <div className="">{formik.errors.firstName}</div>
             ) : null}
             <input
-              className="w-11/12 h-10 md:h-14 border rounded-lg border-solid border-[#FFFFFF] box-border shadow-[0px_0px_4px_rgba(0,0,0,0.25)]"
+              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl"
               id="firstName"
               name="firstName"
               type="text"
@@ -108,7 +107,7 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormLastName}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 border rounded-lg border-solid border-[#FFFFFF] box-border shadow-[0px_0px_4px_rgba(0,0,0,0.25)] place-self-end"
+              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl place-self-end"
               id="lastName"
               name="lastName"
               type="text"
@@ -124,7 +123,7 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormEmail}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 border rounded-lg border-solid border-[#FFFFFF] box-border shadow-[0px_0px_4px_rgba(0,0,0,0.25)] "
+              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl "
               id="email"
               name="email"
               type="email"
@@ -141,7 +140,7 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormPhone}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 border rounded-lg border-solid border-[#FFFFFF] box-border shadow-[0px_0px_4px_rgba(0,0,0,0.25)] place-self-end"
+              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl place-self-end"
               id="phone"
               name="phone"
               type="tel"
@@ -159,7 +158,7 @@ export default function SignupForm({ data }: PageType) {
             {data.common.contactUsFormMessage}
           </label>
           <input
-            className="h-24 md:h-36 border rounded-lg border-solid border-[#FFFFFF] box-border shadow-[0px_0px_4px_rgba(0,0,0,0.25)]"
+            className="h-24 md:h-36 rounded-lg border-solid box-border shadow-4xl"
             id="text"
             name="text"
             type="textbox"
@@ -169,7 +168,7 @@ export default function SignupForm({ data }: PageType) {
         </div>
         <Button
           className={
-            'text-lg md:text-2xl font-bold bg-[#4E47F9] text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
+            'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
           }
           type="submit"
         >

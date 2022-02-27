@@ -1,22 +1,22 @@
 import React from 'react'
-import { PageType } from '../Types'
-import ContactData from '../dataComponents/contactdata'
-import { Button } from '../dataComponents/button'
-import SignupForm from '../form/signUpForm'
+import { PageType } from '../types'
+import ContactData from '../data-components/contact-data'
+import { Button } from '../data-components/button'
+import SignupForm from '../form/sign-up-form'
 
 export default function ContactUs({ data }: PageType) {
   return (
     <>
-      <section className=" mt-32 md:mt-64 ">
+      <section className="mt-32 md:mt-64">
         <div
           id="contactUsItems"
-          className="grid md:grid-cols-2 place-items-center bg-[#F4F3FD] md:h-[600px] relative"
+          className="grid md:grid-cols-2 place-items-center bg-contact-bg md:h-[600px] relative"
         >
           <div className="grid">
             <div className="w-8/12 p-2 md:p-0">
               <Button
                 className={
-                  'text-xl md:text-3xl bg-[#FFFFFF] text-[#4E47F9] px-8 py-2 rounded-full mb-5 font-bold'
+                  'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'
                 }
               >
                 {data.homepage.contactUsHeading}

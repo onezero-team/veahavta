@@ -16,7 +16,7 @@ export const ChangeLangButton = ({
   }
   return (
     <button
-      className={`w-10 h-10 border ${className}`}
+      className={`w-14 h-10 border ${className}`}
       onClick={() => changeLocal(lang)}
     >
       {children}

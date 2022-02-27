@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 
-// export function useLocale(lan?:string) {
 export function useLocale() {
   const router = useRouter()
   let { locale } = router
@@ -11,4 +10,4 @@ export function useLocale() {
   const dir: 'rtl' | 'ltr' = ['he', 'ar'].includes(locale) ? 'rtl' : 'ltr'
   return { router, dir, locale }
 }
-// {languge?}: {languge:string}
+

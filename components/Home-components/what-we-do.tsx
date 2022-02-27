@@ -1,7 +1,7 @@
 import React from 'react'
-import { PageType } from '../Types'
+import { PageType } from '../types'
 
-import Card from '../dataComponents/card'
+import Card from '../data-components/card'
 
 export default function WhatWeDo({ data }: PageType) {
   return (

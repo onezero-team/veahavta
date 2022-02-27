@@ -10,19 +10,19 @@ export default function ContactData({
   text: string
   imagePath: string
 }) {
-  let Type: string
+  let type: string
   if (linkType === 'address') {
-    Type = `https://www.google.co.il/maps/search/` + `${text}`
+    type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    Type = linkType === 'tel' ? 'tel:' : 'mailto'
+    type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
   return (
     <a
       type={linkType}
-      href={`${Type}`}
+      href={type}
       className="flex flex-row justify-self-start p-2"
     >
-      <div className="w-5 h-5 border bg-[url('')] ml-2"></div>
+      <div className="w-5 h-5 border ml-2"></div>{/*bg-[url('')]*/}
       {text}
     </a>
   )
