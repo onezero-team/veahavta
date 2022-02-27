@@ -20,15 +20,15 @@ export default function Header({ locale }: { locale: string }) {
     'Contact us',
     'Support us',
   ]
-  const { dir } = useLocale();
+  const { dir } = useLocale()
   switch (locale) {
     case 'he': {
       // setHeader(hebHeaderLinks); // replace to 'he' by fetch data
-      break;
+      break
     }
     case 'eng': {
-      setHeader(engHeaderLinks);
-      break;
+      setHeader(engHeaderLinks)
+      break
     }
     default:
       break
@@ -56,7 +56,8 @@ export default function Header({ locale }: { locale: string }) {
             <div className="grid grid-cols-4 justify-self-end col-span-2 place-items-center">
               <li>
                 <ChangeLangButton className="ml-2" lang="en">
-                  en {/* string en instert menually because it doesnt exist in the fetched data */}
+                  en{' '}
+                  {/* string en instert menually because it doesnt exist in the fetched data */}
                 </ChangeLangButton>
               </li>
               <li>

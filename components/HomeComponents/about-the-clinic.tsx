@@ -3,7 +3,6 @@ import { PageType } from '../Types'
 import { Button } from '../dataComponents/button'
 
 export default function AboutTheClinic({ data }: PageType) {
-  
   return (
     <>
       <section className="grid md:grid-cols-2 md:gap-4 ">

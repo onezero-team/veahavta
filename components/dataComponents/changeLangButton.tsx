@@ -15,7 +15,10 @@ export const ChangeLangButton = ({
     router.push({ pathname, query }, asPath, { locale: lang })
   }
   return (
-    <button className={`w-10 h-10 border ${className}`} onClick={() => changeLocal(lang)}>
+    <button
+      className={`w-10 h-10 border ${className}`}
+      onClick={() => changeLocal(lang)}
+    >
       {children}
     </button>
   )

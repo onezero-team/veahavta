@@ -12,7 +12,7 @@ export async function getStaticProps({ locale }: NextPageContext) {
     query: HOMEPAGE_QUERY(locale as string),
   })
   return {
-    props: { data }, 
+    props: { data },
   }
 }
 
