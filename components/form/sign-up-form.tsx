@@ -40,7 +40,7 @@ function validateForm(values: {
 
 export default function SignupForm({ data }: PageType) {
   const dir = data.homepage.aboutTitle.includes('b') ? 'right-40' : 'left-40'
-    const formik = useFormik({
+  const formik = useFormik({
     initialValues: {
       firstName: '',
       lastName: '',

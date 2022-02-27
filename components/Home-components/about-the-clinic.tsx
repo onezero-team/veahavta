@@ -6,7 +6,8 @@ export default function AboutTheClinic({ data }: PageType) {
   return (
     <>
       <section className="grid md:grid-cols-2 md:gap-4 ">
-        <div className="hidden md:block w-[600px] h-[500px] mt-6 mr-20 border "></div>{/*bg-[url('')]*/}
+        <div className="hidden md:block w-[600px] h-[500px] mt-6 mr-20 border "></div>
+        {/*bg-[url('')]*/}
 
         <div className="grid place-items-center md:place-items-start">
           <div className="w-7/12 md:p-6 md:pt-8 grid">

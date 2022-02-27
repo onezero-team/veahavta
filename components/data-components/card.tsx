@@ -10,9 +10,7 @@ export default function Card({
   imagePath: string
 }) {
   return (
-    <div
-      className="w-11/12 mt-14 shadow-4xl box-border rounded-3xl h-96"
-    >
+    <div className="w-11/12 mt-14 shadow-4xl box-border rounded-3xl h-96">
       <div className="h-1/2 ">{imagePath}</div>
       <div className="grid place-items-center">
         <div className="w-11/12 ">

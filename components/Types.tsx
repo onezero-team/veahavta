@@ -27,7 +27,7 @@ export type Common = {
   }>
   appLinks: Array<{
     text: string
-    relativeLink:string
+    relativeLink: string
   }>
   languageNames: Array<{
     he: string
@@ -36,7 +36,7 @@ export type Common = {
     am: string
     ti: string
   }>
-   contactUsFormFirstName: string
+  contactUsFormFirstName: string
   contactUsFormLastName: string
   contactUsFormEmail: string
   contactUsFormPhone: string

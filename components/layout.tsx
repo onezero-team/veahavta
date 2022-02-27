@@ -10,7 +10,7 @@ export default function Layout({ children, pageProps }: any) {
   return (
     <>
       <div className="app-wrapper font-['Assistant']" dir={dir}>
-        <Header data={children.props.data}/>
+        <Header data={children.props.data} />
         <Main>{children}</Main>
         <Footer data={children.props.data} />
       </div>

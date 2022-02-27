@@ -28,24 +28,34 @@ export default function Header({ data }: PageType) {
             </div>
             <div className="grid grid-cols-5 justify-self-end col-span-3 place-items-center">
               <li>
-                <ChangeLangButton className="ml-2" lang="am">{data.common.languageNames[0].am}</ChangeLangButton>
+                <ChangeLangButton className="ml-2" lang="am">
+                  {data.common.languageNames[0].am}
+                </ChangeLangButton>
               </li>
               <li>
-                <ChangeLangButton className="ml-2" lang="ar">{data.common.languageNames[0].ar}</ChangeLangButton>
+                <ChangeLangButton className="ml-2" lang="ar">
+                  {data.common.languageNames[0].ar}
+                </ChangeLangButton>
               </li>
               <li>
-                <ChangeLangButton className="ml-2" lang="en">{data.common.languageNames[0].en}</ChangeLangButton>
+                <ChangeLangButton className="ml-2" lang="en">
+                  {data.common.languageNames[0].en}
+                </ChangeLangButton>
               </li>
               <li>
-                <ChangeLangButton className="ml-2" lang="he">{data.common.languageNames[0].he}</ChangeLangButton>
+                <ChangeLangButton className="ml-2" lang="he">
+                  {data.common.languageNames[0].he}
+                </ChangeLangButton>
               </li>
               <li>
-                <ChangeLangButton className="ml-2" lang="ti">{data.common.languageNames[0].ti}</ChangeLangButton>
+                <ChangeLangButton className="ml-2" lang="ti">
+                  {data.common.languageNames[0].ti}
+                </ChangeLangButton>
               </li>
             </div>
           </ul>
         </div>
-      </header >
+      </header>
     </>
   )
 }

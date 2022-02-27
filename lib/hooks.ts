@@ -10,4 +10,3 @@ export function useLocale() {
   const dir: 'rtl' | 'ltr' = ['he', 'ar'].includes(locale) ? 'rtl' : 'ltr'
   return { router, dir, locale }
 }
-
