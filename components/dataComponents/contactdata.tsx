@@ -22,7 +22,7 @@ export default function ContactData({
       href={`${Type}`}
       className="flex flex-row justify-self-start p-2"
     >
-      <div className="w-5 h-5 bg-primary"></div>
+      <div className="w-5 h-5 border bg-[url('')] ml-2"></div>
       {text}
     </a>
   )

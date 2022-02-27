@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/HomeComponents",
-    "components/card.tsx",
+    "components/dataComponents/card.tsx",
     "components/footer"
   ],
   "exclude": ["node_modules"]

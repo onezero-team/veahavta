@@ -1,13 +1,13 @@
-import { Button } from './button'
+import { Button } from './dataComponents/button'
 import FooterMenu from './footer/footermenu'
 import { PageType } from './Types'
-import ContactData from '@/components/contactdata'
+import ContactData from '@/components/dataComponents/contactdata'
 
 export default function Footer({ data }: PageType) {
   return (
     <div className="hidden md:block ">
       <footer className="bg-light px-4 py-8 p-16 grid grid-cols-4 ">
-        <div>icon</div>
+        <div className="bg-[url('')] border h-3/5 w-3/5 self-center justify-self-center"></div>
         <div className="w-4/12 justify-self-center">
           <Button
             className={

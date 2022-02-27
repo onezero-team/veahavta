@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageType } from '../Types'
-import { PageHeader } from '../text'
-import { Button } from '../button'
+import { PageHeader } from '../dataComponents/headerText'
+import { Button } from '../dataComponents/button'
 import themePreval from '@/lib/theme.preval'
 
 export default function Banner({ data }: PageType) {

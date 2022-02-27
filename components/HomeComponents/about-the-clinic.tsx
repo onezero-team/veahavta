@@ -1,19 +1,19 @@
 import React from 'react'
 import { PageType } from '../Types'
-import { Button } from '../button'
-import Image from 'next/image'
+import { Button } from '../dataComponents/button'
 
 export default function AboutTheClinic({ data }: PageType) {
+  
   return (
     <>
       <section className="grid md:grid-cols-2 md:gap-4 ">
-        <div className="hidden md:block w-[600px] h-[500px] mt-6 mr-20">a</div>
+        <div className="hidden md:block w-[600px] h-[500px] mt-6 mr-20 border bg-[url('')]"></div>
 
         <div className="grid place-items-center md:place-items-start">
           <div className="w-7/12 md:p-6 md:pt-8 grid">
             <a
               href="#"
-              className="text-right text-2xl md:text-3xl git config text-[#4E47F9]"
+              className=" text-2xl md:text-3xl git config text-[#4E47F9]"
             >
               {data.homepage.aboutHeading}
             </a>

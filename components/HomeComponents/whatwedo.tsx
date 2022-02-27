@@ -1,12 +1,12 @@
 import React from 'react'
 import { PageType } from '../Types'
 
-import Card from '../card'
+import Card from '../dataComponents/card'
 
 export default function WhatWeDo({ data }: PageType) {
   return (
     <>
-      <section className="grid place-items-center">
+      <section className="mt-12 md:mt-24 grid place-items-center">
         <div className="text-lg md:text-2xl text-[#D25C78] text-center">
           {data.homepage.whatWeDoHeading}
         </div>

@@ -12,11 +12,10 @@ export const ChangeLangButton = ({
   const router = useRouter()
   const changeLocal = (lang: string) => {
     const { pathname, asPath, query } = router
-    // change just the locale and maintain all other route information including href's query
     router.push({ pathname, query }, asPath, { locale: lang })
   }
   return (
-    <button className={`${className}`} onClick={() => changeLocal(lang)}>
+    <button className={`w-10 h-10 border ${className}`} onClick={() => changeLocal(lang)}>
       {children}
     </button>
   )
