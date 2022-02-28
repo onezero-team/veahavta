@@ -12,12 +12,23 @@ export type Common = {
   contactUsFormSendButton: string
 }
 
-export const COMMON_QUERY_STRING = `
-common {
+export const COMMON_QUERY_STRING = (locale: string) => `
+common(locale: ${locale}) {
+  languageNames{
+    he
+    en
+    ar
+    am
+    ti
+  }
   contactUsLinks {
     text
     linkType
     imagePath
+  }
+  appLinks {
+    text
+    relativeLink
   }
   contactUsFormFirstName
   contactUsFormLastName
@@ -25,5 +36,9 @@ common {
   contactUsFormPhone
   contactUsFormMessage
   contactUsFormSendButton
+  footerMenuTitle
+  footerContactUsTitle
+  footerScheduleButton
+  footerSupportUsButton
 }
 `

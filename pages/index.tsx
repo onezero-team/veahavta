@@ -53,9 +53,8 @@ query Homepage {
     contactUsTitle
     contactUsText
   }
-  ${COMMON_QUERY_STRING}
-}
-`
+  ${COMMON_QUERY_STRING(locale)}
+}`
 
 export async function getStaticProps({ locale }: NextPageContext) {
   const data = await request({
