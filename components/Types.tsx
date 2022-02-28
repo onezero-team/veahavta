@@ -77,6 +77,6 @@ query Homepage {
     contactUsTitle
     contactUsText
   }
-  ${COMMON_QUERY_STRING}
+  ${COMMON_QUERY_STRING(locale)}
 }`
 }

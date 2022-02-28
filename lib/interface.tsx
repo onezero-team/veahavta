@@ -23,8 +23,8 @@ export type Common = {
   footerSupportUsButton: string
 }
 
-export const COMMON_QUERY_STRING = `
-common {
+export const COMMON_QUERY_STRING = (locale: string) => `
+common(locale: ${locale}) {
   languageNames{
     he
     en
@@ -51,6 +51,5 @@ common {
   footerContactUsTitle
   footerScheduleButton
   footerSupportUsButton
-  }
-  
+}
 `
