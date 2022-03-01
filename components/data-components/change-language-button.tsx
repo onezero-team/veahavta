@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router'
 
 export const ChangeLangButton = ({
@@ -15,11 +16,13 @@ export const ChangeLangButton = ({
     router.push({ pathname, query }, asPath, { locale: lang })
   }
   return (
+    <div>
     <button
-      className={`w-14 h-10 border ${className}`}
+      className={`md:min-w-[56px] md:min-h-[56px] ${className}`}
       onClick={() => changeLocal(lang)}
     >
-      {children}
+      <img src={`icons/${lang}-icon.svg`} alt={lang} />
     </button>
+    </div>
   )
 }

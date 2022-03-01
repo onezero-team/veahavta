@@ -8,8 +8,6 @@ my own ducomnent explain:
    - validate parameter on submit - i didnt use the 'power' of Formik, did it menually - i need more time to learn and improve my functionality with Formik
    - error / success - by alert()
 
-2. images - by directions - need to insert path to present img, into 'div' by attach the path to bg-[url('path')]
-
 3. footer - appears only on 'xl' screen
 
 4. change language - the data fetched to the form does not include text in English

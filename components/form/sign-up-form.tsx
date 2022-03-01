@@ -59,10 +59,10 @@ export default function SignupForm({ data }: PageType) {
 
         alert(
           'Error!\n \n' +
-            (firstNameError ? `first name: ${firstNameError}\n` : '') +
-            (lastNameError ? `last name: ${lastNameError}\n` : '') +
-            (emailError ? `email: ${emailError}\n` : '') +
-            (phoneError ? `phone: ${phoneError}` : ''),
+          (firstNameError ? `first name: ${firstNameError}\n` : '') +
+          (lastNameError ? `last name: ${lastNameError}\n` : '') +
+          (emailError ? `email: ${emailError}\n` : '') +
+          (phoneError ? `phone: ${phoneError}` : ''),
         )
       } else {
         alert('Form submitted successfully !')
@@ -73,13 +73,10 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className={`mt-12 grid p-2 justify-items-center text-3xl font-bold bg-light
-      md:absolute md:-top-20 md:w-2/5 md:mt-0
-       lg:absolute lg:-top-24 lg:w-2/5 
-        shadow-4xl box-border border-solid rounded-3xl md:${dir} lg:${dir}`}
+            className={`bg-light max-w-[650px] place-self-center  shadow-4xl rounded-xl py-4 p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
     >
-      <div className="w-11/12">
-        <div className="grid grid-cols-2 ">
+      <div className="p-6">
+        <div className="grid grid-cols-2 gap-5">
           <div className="grid grid-rows-2">
             <label
               htmlFor="firstName"
@@ -91,7 +88,7 @@ export default function SignupForm({ data }: PageType) {
               <div className="">{formik.errors.firstName}</div>
             ) : null}
             <input
-              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl"
+              className="rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="firstName"
               name="firstName"
               type="text"
@@ -102,12 +99,12 @@ export default function SignupForm({ data }: PageType) {
           <div className="grid grid-rows-2 ">
             <label
               htmlFor="lastName"
-              className="place-self-start text-lg md:text-xl pr-7 self-center"
+              className="place-self-start text-lg md:text-xl self-center"
             >
               {data.common.contactUsFormLastName}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl place-self-end"
+              className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="lastName"
               name="lastName"
               type="text"
@@ -123,7 +120,7 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormEmail}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl "
+              className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="email"
               name="email"
               type="email"
@@ -135,12 +132,12 @@ export default function SignupForm({ data }: PageType) {
           <div className="grid grid-rows-2 ">
             <label
               htmlFor="phone"
-              className="place-self-start text-lg md:text-xl pr-7 self-center"
+              className="place-self-start text-lg md:text-xl self-center"
             >
               {data.common.contactUsFormPhone}
             </label>
             <input
-              className="w-11/12 h-10 md:h-14 rounded-lg border-solid box-border shadow-4xl place-self-end"
+              className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="phone"
               name="phone"
               type="tel"

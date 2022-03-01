@@ -3,18 +3,18 @@ import { PageType } from '../types'
 import { PageHeader } from '../data-components/header-text'
 import { Button } from '../data-components/button'
 import themePreval from '@/lib/theme.preval'
+import { WrapperLarge } from '../wrapper'
 
 export default function Banner({ data }: PageType) {
   return (
-    <>
-      <div className="wrapper min-h-screen-50">
+    <div className="wrapper">
+      <WrapperLarge>
         <div className="grid place-items-center">
           <div className="background"></div>
           <PageHeader>{data.homepage.title}</PageHeader>
-          <p className="text-xl text-center w-7/12 md:4/12 md:text-2xl">
+          <p className="text-xl text-center max-w-[400px] md:4/12 md:text-2xl">
             {data.homepage.description}
           </p>
-          {/* <p className="text-2xl">{data.homepage.description.slice(40)}</p> */}
           <Button
             className={
               'text-xl font-bold bg-header-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
@@ -23,7 +23,8 @@ export default function Banner({ data }: PageType) {
             {data.homepage.getToKnowUsButton}
           </Button>
         </div>
-      </div>
+      </WrapperLarge>
+
       <style jsx>{`
         div.wrapper {
           margin-top: -${themePreval.height.header};
@@ -38,9 +39,9 @@ export default function Banner({ data }: PageType) {
             109.17deg,
             rgba(1, 157, 177, 0.21) 38.49%,
             #019db1 98.95%
-          );
-        }
-      `}</style>
-    </>
+            );
+          }
+          `}</style>
+    </div>
   )
 }
