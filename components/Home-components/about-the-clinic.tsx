@@ -7,7 +7,7 @@ import { WrapperLarge } from '../wrapper'
 export default function AboutTheClinic({ data }: PageType) {
   return (
     <WrapperLarge className="">
-      <section className="grid xl:grid-cols-2 lg:gap-4 py-24">
+      <section className="grid xl:grid-cols-2 lg:gap-4 py-18 xl:py-24">
         <img
           src="/icons/about-clinic.svg"
           alt="אודות המרפאה"

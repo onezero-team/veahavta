@@ -1,5 +1,3 @@
-import { useLocale } from '@/lib/hooks'
-import { NextRouter, useRouter } from 'next/router'
 
 export const Button = ({
   className,

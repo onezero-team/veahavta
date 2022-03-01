@@ -9,7 +9,7 @@ export default function Layout({ children, pageProps }: any) {
   const { dir, locale } = useLocale()
   return (
     <>
-      <div className="app-wrapper font-['Assistant']" dir={dir}>
+      <div className="app-wrapper font-serif" dir={dir}>
         <Header data={children.props.data} />
         <Main>{children}</Main>
         <Footer data={children.props.data} />

@@ -1,6 +1,5 @@
 import React from 'react'
 import { PageType } from '../types'
-
 import Card from '../data-components/card'
 import { WrapperLarge } from '../wrapper'
 
