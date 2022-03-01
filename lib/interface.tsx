@@ -40,10 +40,10 @@ common(locale: ${locale}) {
   contactUsFormSuccessMessage
   contactUsFormErrorFirstNameMissing
   contactUsFormErrorLastNameMissing
-  contactUsFormErrorEmailInvalid
   contactUsFormErrorEmailMissing
-  contactUsFormErrorPhoneInvalid
+  contactUsFormErrorEmailInvalid
   contactUsFormErrorPhoneMissing
+  contactUsFormErrorPhoneInvalid
   contactUsFormErrorMessageMissing
   footerMenuTitle
   footerContactUsTitle
