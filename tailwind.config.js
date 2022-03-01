@@ -17,11 +17,11 @@ module.exports = {
       colors: {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
-        'icon-bg' : '#4E47F9'
+        'icon-bg': '#4E47F9',
       },
       text: {
-        'medium': 'md:text-xl',
-        'large': 'lg:text-2xl'
+        medium: 'md:text-xl',
+        large: 'lg:text-2xl',
       },
       boxShadow: {
         '4xl': '0px 0px 4px rgba(0,0,0,0.25)',
@@ -33,11 +33,10 @@ module.exports = {
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
       },
-      
+
       gridTemplateRows: {
         'auto-1fr': 'auto 1fr',
       },
-      
     },
   },
   plugins: [],

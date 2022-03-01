@@ -39,9 +39,9 @@ export default function Banner({ data }: PageType) {
             109.17deg,
             rgba(1, 157, 177, 0.21) 38.49%,
             #019db1 98.95%
-            );
-          }
-          `}</style>
+          );
+        }
+      `}</style>
     </div>
   )
 }

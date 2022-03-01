@@ -8,7 +8,7 @@ import { WrapperLarge } from '../wrapper'
 export default function ContactUs({ data }: PageType) {
   return (
     <section className="mt-32 xl:mt-64 bg-contact-bg">
-      <WrapperLarge className=''>
+      <WrapperLarge className="">
         <div
           id="contactUsItems"
           className="grid xl:grid-cols-2 py-4 relative lg:items-center gap-6 xl:gap-0"
@@ -34,7 +34,7 @@ export default function ContactUs({ data }: PageType) {
                     linkType={i.linkType}
                     text={i.text}
                     imagePath={i.imagePath}
-                    className='bg-bg-icon-bg'
+                    className="bg-bg-icon-bg"
                     key={key}
                   />
                 )

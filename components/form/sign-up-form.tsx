@@ -59,10 +59,10 @@ export default function SignupForm({ data }: PageType) {
 
         alert(
           'Error!\n \n' +
-          (firstNameError ? `first name: ${firstNameError}\n` : '') +
-          (lastNameError ? `last name: ${lastNameError}\n` : '') +
-          (emailError ? `email: ${emailError}\n` : '') +
-          (phoneError ? `phone: ${phoneError}` : ''),
+            (firstNameError ? `first name: ${firstNameError}\n` : '') +
+            (lastNameError ? `last name: ${lastNameError}\n` : '') +
+            (emailError ? `email: ${emailError}\n` : '') +
+            (phoneError ? `phone: ${phoneError}` : ''),
         )
       } else {
         alert('Form submitted successfully !')
@@ -73,7 +73,7 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-            className={`bg-light max-w-[650px] place-self-center  shadow-4xl rounded-xl py-4 p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
+      className={`bg-light max-w-[650px] place-self-center  shadow-4xl rounded-xl py-4 p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
     >
       <div className="p-6">
         <div className="grid grid-cols-2 gap-5">

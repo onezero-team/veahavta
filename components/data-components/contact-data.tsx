@@ -6,12 +6,12 @@ export default function ContactData({
   linkType,
   text,
   imagePath,
-  className
+  className,
 }: {
   linkType: string
   text: string
   imagePath: string
-  className?:string
+  className?: string
 }) {
   let type: string
   if (linkType === 'address') {
@@ -20,20 +20,13 @@ export default function ContactData({
     type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
   return (
-    <a
-      type={linkType}
-      href={type}
-      className="flex flex-row justify-self-start"
-    >
+    <a type={linkType} href={type} className="flex flex-row justify-self-start">
       <div className="grid grid-cols-2 grid-cols-auto-1fr grid-rows-auto-1fr gap-1">
         <div className="grid place-items-center min-w-[35px] min-h-[35px] max-h-[35px] bg-icon-bg rounded-full">
           <img src={imagePath} alt={linkType} />
         </div>
-        <p className="self-center max-w-[110px]">
-          {text}
-        </p>
+        <p className="self-center max-w-[110px]">{text}</p>
       </div>
     </a>
-
   )
 }
