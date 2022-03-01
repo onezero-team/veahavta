@@ -24,6 +24,7 @@ common(locale: ${locale}) {
   contactUsLinks {
     text
     linkType
+    linkValue
     imagePath
   }
   appLinks {
@@ -36,6 +37,14 @@ common(locale: ${locale}) {
   contactUsFormPhone
   contactUsFormMessage
   contactUsFormSendButton
+  contactUsFormSuccessMessage
+  contactUsFormErrorFirstNameMissing
+  contactUsFormErrorLastNameMissing
+  contactUsFormErrorEmailInvalid
+  contactUsFormErrorEmailMissing
+  contactUsFormErrorPhoneInvalid
+  contactUsFormErrorPhoneMissing
+  contactUsFormErrorMessageMissing
   footerMenuTitle
   footerContactUsTitle
   footerScheduleButton
