@@ -1,45 +1,11 @@
 import React from 'react'
-import { useFormik, Field } from 'formik'
+import { useFormik } from 'formik'
+import * as Yup from "yup"
 import { Button } from '../data-components/button'
 import { PageType } from '../types'
 
-function validateForm(values: {
-  firstName: any
-  lastName: any
-  email: any
-  phone?: string
-  text?: string
-}) {
-  let errors: { [k: string]: any } = {}
-  if (!values.email) {
-    errors.email = 'Required'
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email format'
-  }
-  if (!values.firstName) {
-    errors.firstName = 'Required'
-  }
-  if (!values.lastName) {
-    errors.lastName = 'Required'
-  }
-  if (!values.phone) {
-    errors.phone = 'Required'
-  } else if (
-    !values.phone.match(
-      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
-    )
-  ) {
-    errors.phone = 'Invalid number'
-  }
-
-  if (errors.email || errors.firstName || errors.lastName || errors.phone) {
-    return errors
-  }
-  return null
-}
-
 export default function SignupForm({ data }: PageType) {
-  const dir = data.homepage.aboutTitle.includes('b') ? 'right-40' : 'left-40'
+  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -48,28 +14,18 @@ export default function SignupForm({ data }: PageType) {
       phone: '',
       text: '',
     },
+    validationSchema: Yup.object({
+      firstName: Yup.string().min(2, "Must be 2 characters or more").required("Required").max(15, "Must be 2 characters or less").required("Required"),
+      lastName: Yup.string().min(2, "Must be 2 characters or more").required("Required").max(15, "Must be 2 characters or less").required("Required"),
+      email: Yup.string().email("Invalid Email").required("Required"),
+      phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required("Required")
+
+    }),
     onSubmit: (values) => {
-      let res = validateForm(values)
-
-      if (res) {
-        let firstNameError = res.firstName ? res.firstName : null
-        let lastNameError = res.lastName ? res.lastName : null
-        let emailError = res.email ? res.email : null
-        let phoneError = res.phone ? res.phone : null
-
-        alert(
-          'Error!\n \n' +
-            (firstNameError ? `first name: ${firstNameError}\n` : '') +
-            (lastNameError ? `last name: ${lastNameError}\n` : '') +
-            (emailError ? `email: ${emailError}\n` : '') +
-            (phoneError ? `phone: ${phoneError}` : ''),
-        )
-      } else {
-        alert('Form submitted successfully !')
-      }
+      alert('Form submitted successfully !')
     },
   })
-
+  console.log(formik.touched);
   return (
     <form
       onSubmit={formik.handleSubmit}
@@ -84,14 +40,15 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormFirstName}
             </label>
-            {formik.errors.firstName ? (
-              <div className="">{formik.errors.firstName}</div>
+            {formik.touched.firstName && formik.errors.firstName ? (
+              <p className="text-[#f44336]">{formik.errors.firstName}</p>
             ) : null}
             <input
               className="rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="firstName"
               name="firstName"
               type="text"
+              onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.firstName}
             />
@@ -103,11 +60,14 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormLastName}
             </label>
+            {formik.touched.lastName && formik.errors.lastName ? (
+              <p className="text-[#f44336]">{formik.errors.lastName}</p>) : null}
             <input
               className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="lastName"
               name="lastName"
               type="text"
+              onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.lastName}
             />
@@ -119,11 +79,15 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormEmail}
             </label>
+            {formik.touched.email && formik.errors.email ? (
+              <p className="text-[#f44336]">{formik.errors.email}</p>
+            ) : null}
             <input
               className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="email"
               name="email"
               type="email"
+              onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.email}
             />
@@ -136,11 +100,14 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormPhone}
             </label>
+            {formik.touched.phone && formik.errors.phone ? (
+              <p className="text-[#f44336]">{formik.errors.phone}</p>) : null}
             <input
               className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="phone"
               name="phone"
               type="tel"
+              onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.phone}
             />
@@ -159,6 +126,7 @@ export default function SignupForm({ data }: PageType) {
             id="text"
             name="text"
             type="textbox"
+            onBlur={formik.handleBlur}
             onChange={formik.handleChange}
             value={formik.values.text}
           />
