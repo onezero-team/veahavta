@@ -1,10 +1,10 @@
 import { PageType } from '../components/types'
 import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
-import Banner from '../components/Home-components/banner'
-import WhatWeDo from '../components/Home-components/what-we-do'
-import AboutTheClinic from '../components/Home-components/about-the-clinic'
-import ContactUs from '../components/Home-components/contact-us'
+import Banner from '../components/home-components/banner'
+import WhatWeDo from '../components/home-components/what-we-do'
+import AboutTheClinic from '../components/home-components/about-the-clinic'
+import ContactUs from '../components/home-components/contact-us'
 import { HOMEPAGE_QUERY } from '../components/types'
 
 export async function getStaticProps({ locale }: NextPageContext) {
