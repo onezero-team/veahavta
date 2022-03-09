@@ -1,11 +1,12 @@
 import React from 'react'
 import { useFormik } from 'formik'
-import * as Yup from "yup"
+import * as Yup from 'yup'
 import { Button } from '../data-components/button'
 import { PageType } from '../types'
 
 export default function SignupForm({ data }: PageType) {
-  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+  const phoneRegExp =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -15,17 +16,26 @@ export default function SignupForm({ data }: PageType) {
       text: '',
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().min(2, "Must be 2 characters or more").required("Required").max(15, "Must be 2 characters or less").required("Required"),
-      lastName: Yup.string().min(2, "Must be 2 characters or more").required("Required").max(15, "Must be 2 characters or less").required("Required"),
-      email: Yup.string().email("Invalid Email").required("Required"),
-      phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required("Required")
-
+      firstName: Yup.string()
+        .min(2, 'Must be 2 characters or more')
+        .required('Required')
+        .max(15, 'Must be 2 characters or less')
+        .required('Required'),
+      lastName: Yup.string()
+        .min(2, 'Must be 2 characters or more')
+        .required('Required')
+        .max(15, 'Must be 2 characters or less')
+        .required('Required'),
+      email: Yup.string().email('Invalid Email').required('Required'),
+      phone: Yup.string()
+        .matches(phoneRegExp, 'Phone number is not valid')
+        .required('Required'),
     }),
     onSubmit: (values) => {
       alert('Form submitted successfully !')
     },
   })
-  console.log(formik.touched);
+  console.log(formik.touched)
   return (
     <form
       onSubmit={formik.handleSubmit}
@@ -61,7 +71,8 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormLastName}
             </label>
             {formik.touched.lastName && formik.errors.lastName ? (
-              <p className="text-[#f44336]">{formik.errors.lastName}</p>) : null}
+              <p className="text-[#f44336]">{formik.errors.lastName}</p>
+            ) : null}
             <input
               className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="lastName"
@@ -101,7 +112,8 @@ export default function SignupForm({ data }: PageType) {
               {data.common.contactUsFormPhone}
             </label>
             {formik.touched.phone && formik.errors.phone ? (
-              <p className="text-[#f44336]">{formik.errors.phone}</p>) : null}
+              <p className="text-[#f44336]">{formik.errors.phone}</p>
+            ) : null}
             <input
               className="min-h-[30px] rounded-lg border-solid box-border shadow-4xl min-w-[100px]"
               id="phone"
