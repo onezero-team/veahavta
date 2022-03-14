@@ -6,7 +6,7 @@ import { WrapperLarge } from '../wrapper'
 export default function WhatWeDo({ data }: PageType) {
   return (
     <WrapperLarge>
-      <section className="grid place-items-center">
+      <section className="grid place-items-center gap-3">
         <div className="text-lg md:text-2xl text-[#D25C78] text-center">
           {data.homepage.whatWeDoHeading}
         </div>
@@ -14,7 +14,7 @@ export default function WhatWeDo({ data }: PageType) {
           {data.homepage.whatWeDoTitle}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:max-w-[66.6%] xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mt-3 lg:mt-8 xl:mt-12">
           {data.homepage.whatWeDoCards.map((card, i) => {
             return (
               <Card

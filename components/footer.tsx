@@ -3,11 +3,13 @@ import { Button } from './data-components/button'
 import FooterMenu from './footer-menu'
 import { PageType } from './types'
 import ContactData from '@/components/data-components/contact-data'
+import { WrapperLarge } from './wrapper'
 
 export default function Footer({ data }: PageType) {
   return (
     <div className="hidden md:block ">
-      <footer className="bg-light p-16 grid grid-cols-4 ">
+      <WrapperLarge>
+      <footer className="bg-light grid grid-cols-4 ">
         <img src="/icons/veahavta-icon.svg" alt="ואהבת לוגו" />
         <div className="grid justify-self-center self-center">
           <Button
@@ -30,21 +32,22 @@ export default function Footer({ data }: PageType) {
           <h2 className="font-bold text-2xl">
             {data.homepage.contactUsHeading}
           </h2>
-          <div className="text-sm">
+          <ul className="text-sm">
             {data.common.contactUsLinks.map((contactUsLinks: any, key: any) => {
               return (
                 <ContactData
                   linkType={contactUsLinks.linkType}
                   text={contactUsLinks.text}
-                  imagePath={contactUsLinks.imagePath}
+                  imagePath={'/footer' + contactUsLinks.imagePath}
                   className="bg-icon"
                   key={key}
                 />
               )
             })}
-          </div>
+          </ul>
         </div>
       </footer>
+      </WrapperLarge>
     </div>
   )
 }

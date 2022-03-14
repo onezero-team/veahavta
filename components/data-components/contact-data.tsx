@@ -1,31 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-export default function ContactData({
-  linkType,
-  text,
-  imagePath,
-  className,
-}: {
-  linkType: string
-  text: string
-  imagePath: string
-  className?: string
-}) {
+export default function ContactData({ linkType, text, imagePath, className }: { linkType: string, text: string, imagePath: string, className?: string }) {
+  console.log(imagePath);
   let type: string
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
     type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
+  console.log(imagePath);
   return (
-    <a type={linkType} href={type} className="flex flex-row justify-self-start">
-      <div className="grid grid-cols-2 grid-cols-auto-1fr grid-rows-auto-1fr gap-1">
-        <div className="grid place-items-center min-w-[35px] min-h-[35px] max-h-[35px] bg-icon-bg rounded-full">
+    <li>
+      <a type={linkType} href={type} className="grid grid-rows-1 w-[193px]">
+        <div className="grid grid-cols-2 grid-cols-auto-1fr gap-4">
           <img src={imagePath} alt={linkType} />
+          <p className="text-base">{text}</p>
         </div>
-        <p className="self-center max-w-[110px]">{text}</p>
-      </div>
-    </a>
+      </a>
+    </li>
   )
 }

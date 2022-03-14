@@ -14,7 +14,7 @@ export function WrapperLarge({
   return (
     <section
       className={`
-      w-full max-w-wrp grid md:px-12 lg:px-28 px-6 py-3 md:py-5 mx-auto ${className}`}
+      grid md:px-12 lg:px-18 px-6 py-3 md:py-6 lg:py-10 xl:px-28 xl:py-16 mx-auto ${className}`}
     >
       {children}
     </section>

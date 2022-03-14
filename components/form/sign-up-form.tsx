@@ -3,6 +3,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Button } from '../data-components/button'
 import { PageType } from '../types'
+import Input from './input-component'
 
 export default function SignupForm({ data }: PageType) {
   const phoneRegExp =
@@ -35,18 +36,16 @@ export default function SignupForm({ data }: PageType) {
       alert('Form submitted successfully !')
     },
   })
-  console.log(formik.touched)
+
   return (
-    <form
-      onSubmit={formik.handleSubmit}
-      className={`bg-light max-w-[650px] place-self-center  shadow-4xl rounded-xl py-4 p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
-    >
+    <form onSubmit={formik.handleSubmit} className={`w-full max-w-wrp bg-light max-w-[630px] shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}>
       <div className="p-6">
         <div className="grid grid-cols-2 gap-5">
+          {/* <Input data={data.common.contactUsFormFirstName} /> */}
           <div className="grid grid-rows-2">
             <label
               htmlFor="firstName"
-              className="text-lg md:text-xl self-center"
+              className="place-self-start text-lg md:text-xl self-center pb-4"
             >
               {data.common.contactUsFormFirstName}
             </label>
@@ -66,7 +65,7 @@ export default function SignupForm({ data }: PageType) {
           <div className="grid grid-rows-2 ">
             <label
               htmlFor="lastName"
-              className="place-self-start text-lg md:text-xl self-center"
+              className="place-self-start text-lg md:text-xl self-center pb-4"
             >
               {data.common.contactUsFormLastName}
             </label>
@@ -86,7 +85,7 @@ export default function SignupForm({ data }: PageType) {
           <div className="grid grid-rows-2 ">
             <label
               htmlFor="email"
-              className="place-self-start text-lg md:text-xl self-center"
+              className="place-self-start text-lg md:text-xl self-center pb-4"
             >
               {data.common.contactUsFormEmail}
             </label>
@@ -107,7 +106,7 @@ export default function SignupForm({ data }: PageType) {
           <div className="grid grid-rows-2 ">
             <label
               htmlFor="phone"
-              className="place-self-start text-lg md:text-xl self-center"
+              className="place-self-start text-lg md:text-xl self-center pb-4"
             >
               {data.common.contactUsFormPhone}
             </label>

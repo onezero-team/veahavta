@@ -1,4 +1,4 @@
-import { PageType } from '../components/types'
+import { PageType } from '@/components/types'
 import { NextPageContext } from 'next'
 import { request } from '../lib/datocms'
 import Banner from '../components/home-components/banner'
