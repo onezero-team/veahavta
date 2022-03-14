@@ -10,15 +10,14 @@ export default function AboutTheClinic({ data }: PageType) {
       <WrapperLarge className="">
         <div className="grid xl:grid-cols-2 gap-12 xl:gap-6 justify-items-center">
           {/* <div className="grid xl:grid-cols-2 lg:gap-4 py-18 xl:py-10 justify-items-center"> */}
-          <div className='max-w-[630px]'>
-
+          <div className="max-w-[630px]">
             <img
               src="/icons/about-clinic.png"
               alt="אודות המרפאה"
               className="justify-self-center"
             />
           </div>
-          <div className='grid max-w-[630px]'>
+          <div className="grid max-w-[630px]">
             <div className="grid xl:place-items-start justify-self-center">
               <div className="">
                 <a href="#" className="text-2xl text-header-blue xl:text-3xl">

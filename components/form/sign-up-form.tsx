@@ -38,7 +38,10 @@ export default function SignupForm({ data }: PageType) {
   })
 
   return (
-    <form onSubmit={formik.handleSubmit} className={`w-full max-w-wrp bg-light max-w-[630px] shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}>
+    <form
+      onSubmit={formik.handleSubmit}
+      className={`w-full max-w-wrp bg-light max-w-[630px] shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
+    >
       <div className="p-6">
         <div className="grid grid-cols-2 gap-5">
           {/* <Input data={data.common.contactUsFormFirstName} /> */}
