@@ -16,7 +16,12 @@ export default function ContactUs({ data }: PageType) {
           <div className="grid xl:grid-cols-2 gap-12 xl:gap-6 justify-items-center">
             <div className="grid grid-rows-auto-1fr gap-2 ">
               <div className="p-2 md:p-0 lg:place-items-start">
-                <Button className={'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'} text={data.homepage.contactUsHeading} />
+                <Button
+                  className={
+                    'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'
+                  }
+                  text={data.homepage.contactUsHeading}
+                />
                 <h2 className="text-2xl md:text-4xl font-bold">
                   {data.homepage.contactUsTitle}
                 </h2>

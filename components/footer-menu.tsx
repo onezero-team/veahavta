@@ -7,9 +7,9 @@ export default function FooterMenu({ data }: PageType) {
     <div className="justify-self-center self-center">
       <h2 className="font-bold md:text-2xl">{data.common.footerMenuTitle}</h2>
       <div className="grid place-items-start">
-        <Button text={data.homepage.aboutHeading}/>
-        <Button text={data.common.footerContactUsTitle}/>
-        <Button text={data.common.footerSupportUsButton}/>
+        <Button text={data.homepage.aboutHeading} />
+        <Button text={data.common.footerContactUsTitle} />
+        <Button text={data.common.footerSupportUsButton} />
       </div>
     </div>
   )

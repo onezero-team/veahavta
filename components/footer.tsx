@@ -15,11 +15,15 @@ export default function Footer({ data }: PageType) {
             <Button
               className={
                 'text-base text-header-blue px-8 py-2 rounded-full mb-1 border-2 border-solid font-bold'
-              } text={data.common.footerScheduleButton} />
+              }
+              text={data.common.footerScheduleButton}
+            />
             <Button
               className={
                 'text-base text-header-blue px-8 py-2 rounded-full mt-1 border-2 border-solid font-bold'
-              } text={data.common.footerSupportUsButton} />
+              }
+              text={data.common.footerSupportUsButton}
+            />
           </div>
           <FooterMenu data={data}></FooterMenu>
           <div className="self-center">

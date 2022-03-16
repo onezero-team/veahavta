@@ -5,10 +5,10 @@ import { Button } from '../data-components/button'
 import { PageType } from '../types'
 
 export interface FormModel {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
+  firstName: ''
+  lastName: ''
+  email: ''
+  phone: ''
   text: ''
 }
 
@@ -96,7 +96,9 @@ export default function SignupForm({ data }: PageType) {
               />
             </div>
             {formik.touched.firstName && formik.errors.firstName ? (
-              <p className="text-xs text-[#f44336] self-center">{formik.errors.firstName}</p>
+              <p className="text-xs text-[#f44336] self-center">
+                {formik.errors.firstName}
+              </p>
             ) : null}
           </div>
           <div className="grid grid-rows-2 grid-rows-auto-1fr">
@@ -106,7 +108,9 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormLastName}
               {formik.touched.lastName && formik.errors.lastName ? (
-                <p className="text-xs text-[#f44336] self-center">{formik.errors.lastName}</p>
+                <p className="text-xs text-[#f44336] self-center">
+                  {formik.errors.lastName}
+                </p>
               ) : null}
             </label>
             <input
@@ -126,7 +130,9 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormEmail}
               {formik.touched.email && formik.errors.email ? (
-                <p className="text-xs text-[#f44336] self-center">{formik.errors.email}</p>
+                <p className="text-xs text-[#f44336] self-center">
+                  {formik.errors.email}
+                </p>
               ) : null}
             </label>
             <input
@@ -147,7 +153,9 @@ export default function SignupForm({ data }: PageType) {
             >
               {data.common.contactUsFormPhone}
               {formik.touched.phone && formik.errors.phone ? (
-                <p className="text-xs text-[#f44336] self-center">{formik.errors.phone}</p>
+                <p className="text-xs text-[#f44336] self-center">
+                  {formik.errors.phone}
+                </p>
               ) : null}
             </label>
             <input
@@ -194,4 +202,3 @@ export default function SignupForm({ data }: PageType) {
 function useField(props: any): [any, any, any] {
   throw new Error('Function not implemented.')
 }
-

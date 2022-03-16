@@ -1,4 +1,4 @@
-import { Wrapper, WrapperMedium } from "../wrapper"
+import { Wrapper, WrapperMedium } from '../wrapper'
 
 export const PageHeader = ({ children }: { children: string }) => {
   return (

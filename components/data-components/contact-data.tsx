@@ -12,7 +12,7 @@ export default function ContactData({
   imagePath: string
   className?: string
 }) {
-  console.log(imagePath, text,linkType)
+  console.log(imagePath, text, linkType)
   let type: string
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
