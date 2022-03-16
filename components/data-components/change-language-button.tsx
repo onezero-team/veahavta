@@ -18,7 +18,7 @@ export const ChangeLangButton = ({
   return (
     <div>
       <button
-        className={`md:min-w-[56px] md:min-h-[56px] ${className}`}
+        className={`md: md:min-h-[56px] ${className}`}
         onClick={() => changeLocale(lang)}
       >
         <img src={`icons/${lang}-icon.svg`} alt={lang} />

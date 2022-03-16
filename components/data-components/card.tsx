@@ -11,7 +11,7 @@ export default function Card({
   imagePath: string
 }) {
   return (
-    <div className="shadow-4xl box-border rounded-3xl min-h-[360px] min-w-[180px] max-w-[300px] overflow-hidden">
+    <div className="shadow-4xl box-border rounded-3xl min-h-[360px]  max-w-[300px] overflow-hidden">
       <div className="grid place-items-center bg-contact-bg py-4">
         <img src={imagePath} alt={title} />
       </div>
