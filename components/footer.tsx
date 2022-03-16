@@ -26,12 +26,7 @@ export default function Footer({ data }: PageType) {
             />
           </div>
           <FooterMenu data={data}></FooterMenu>
-          <div className="self-center">
-            <h2 className="font-bold text-2xl">
-              {data.homepage.contactUsHeading}
-            </h2>
-            <ContactUsFooterLinkList data={data} />
-          </div>
+          <ContactUsFooterLinkList data={data} />
         </footer>
       </WrapperLarge>
     </div>

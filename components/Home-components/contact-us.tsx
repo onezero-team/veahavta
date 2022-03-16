@@ -1,10 +1,8 @@
 import React from 'react'
 import { PageType } from '../types'
-import ContactData from '../data-components/contact-data'
 import { Button } from '../data-components/button'
 import SignupForm from '../form/sign-up-form'
 import { WrapperLarge } from '../wrapper'
-import ContactUsLink from '../data-components/contact-us-link'
 import ContactUsLinkList from '../data-components/contact-us-link-list'
 
 export default function ContactUs({ data }: PageType) {
