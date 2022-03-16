@@ -38,9 +38,9 @@ export default function AboutTheClinic({ data }: PageType) {
                     className={
                       'text-lg font-bold bg-header-blue text-light px-8 py-2 rounded-full m-12 font-bold m:text-xl lg:text-2xl'
                     }
-                  >
+                  text=
                     {data.homepage.aboutUsButton}
-                  </Button>
+                />
                 </div>
               </div>
             </div>

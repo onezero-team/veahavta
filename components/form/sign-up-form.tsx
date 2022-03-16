@@ -191,10 +191,9 @@ export default function SignupForm({ data }: PageType) {
           className={
             'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
           }
-          type="submit"
-        >
-          {data.common.contactUsFormSendButton}
-        </Button>
+          type="submit" text={data.common.contactUsFormSendButton}
+        />
+       
       </div>
     </form>
   )
