@@ -32,7 +32,6 @@ export default function SignupForm({ data }: PageType) {
       phone: Yup.string()
         .matches(phoneRegExp, 'Phone number is not valid')
         .required('Required'),
-
     }),
     onSubmit: (values) => {
       alert('Form submitted successfully !')
@@ -46,25 +45,41 @@ export default function SignupForm({ data }: PageType) {
     >
       <div className="p-5">
         <div className="grid grid-cols-2 gap-5">
-          <Input label='firstName' text={data.common.contactUsFormFirstName}
+          <Input
+            label="firstName"
+            text={data.common.contactUsFormFirstName}
             formik={formik}
-            touch={formik.touched.firstName} error={formik.errors.firstName} />
-          <Input label='lastName' text={data.common.contactUsFormLastName}
-            formik={formik}
-            touch={formik.touched.lastName} error={formik.errors.lastName}
+            touch={formik.touched.firstName}
+            error={formik.errors.firstName}
           />
-          <Input label='email' text={data.common.contactUsFormEmail}
+          <Input
+            label="lastName"
+            text={data.common.contactUsFormLastName}
             formik={formik}
-            touch={formik.touched.email} error={formik.errors.email}
+            touch={formik.touched.lastName}
+            error={formik.errors.lastName}
           />
-          <Input label='phone' text={data.common.contactUsFormPhone}
+          <Input
+            label="email"
+            text={data.common.contactUsFormEmail}
             formik={formik}
-            touch={formik.touched.phone} error={formik.errors.phone}
+            touch={formik.touched.email}
+            error={formik.errors.email}
+          />
+          <Input
+            label="phone"
+            text={data.common.contactUsFormPhone}
+            formik={formik}
+            touch={formik.touched.phone}
+            error={formik.errors.phone}
           />
         </div>
 
-        <TextBox label='text' text={data.common.contactUsFormMessage}
-          formik={formik} />
+        <TextBox
+          label="text"
+          text={data.common.contactUsFormMessage}
+          formik={formik}
+        />
         <Button
           className={
             'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'

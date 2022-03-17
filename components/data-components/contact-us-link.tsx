@@ -20,7 +20,7 @@ export default function ContactUsLink({
   }
   return (
     <li className="">
-      <a type={linkType} href={type} className="">
+      <a type={linkType} href={type} target="_blank" className="" rel="noreferrer">
         <div className={className}>
           <img src={imagePath} alt={linkType} />
           <p className="text-base self-center">{text}</p>
