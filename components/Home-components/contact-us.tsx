@@ -8,9 +8,11 @@ import ImgCircle from '../data-components/contact-us-img'
 import { useLocale } from '@/lib/hooks'
 
 export default function ContactUs({ data }: PageType) {
-  const {dir} = useLocale();
-  let side,otherSide;
-  dir ==='rtl' ? (side='right', otherSide='left') : (side='left', otherSide='right');
+  const { dir } = useLocale()
+  let side, otherSide
+  dir === 'rtl'
+    ? ((side = 'right'), (otherSide = 'left'))
+    : ((side = 'left'), (otherSide = 'right'))
   return (
     <section id="contact-us">
       <div className="hidden lg:block h-16 bg-light"></div>
