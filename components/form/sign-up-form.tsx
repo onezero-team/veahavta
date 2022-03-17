@@ -5,6 +5,7 @@ import { Button } from '../data-components/button'
 import { PageType } from '../types'
 import Input from './input-component'
 import TextBox from './text-box-component'
+import useTranslation from 'next-translate/useTranslation'
 
 export default function SignupForm({ data }: PageType) {
   const phoneRegExp =
@@ -41,7 +42,7 @@ export default function SignupForm({ data }: PageType) {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className={`w-full max-w-wrp bg-light  shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px]`}
+      className={`w-full max-w-wrp bg-light  shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px] max-w-[650px]`}
     >
       <div className="p-5">
         <div className="grid grid-cols-2 gap-5">

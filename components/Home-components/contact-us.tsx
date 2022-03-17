@@ -4,13 +4,20 @@ import { Button } from '../data-components/button'
 import SignupForm from '../form/sign-up-form'
 import { WrapperLarge } from '../wrapper'
 import ContactUsLinkList from '../data-components/contact-us-link-list'
+import ImgCircle from '../data-components/contact-us-img'
+import { useLocale } from '@/lib/hooks'
 
 export default function ContactUs({ data }: PageType) {
+  const {dir} = useLocale();
+  let side,otherSide;
+  dir ==='rtl' ? (side='right', otherSide='left') : (side='left', otherSide='right');
   return (
     <section id="contact-us">
       <div className="hidden lg:block h-16 bg-light"></div>
       <section className="bg-contact-bg">
-        <WrapperLarge className="">
+        <WrapperLarge className="relative overflow-hidden">
+          <ImgCircle className={`-${side}-36 top-10`} />
+          <ImgCircle className={`${otherSide}-0 -bottom-24`} />
           <div className="grid xl:grid-cols-2 gap-6 lg:gap-8 justify-items-center">
             <div className="grid grid-rows-auto-1fr gap-2 ">
               <div className="p-2 md:p-0 lg:place-items-start">
