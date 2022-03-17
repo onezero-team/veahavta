@@ -21,7 +21,7 @@ export default function ContactUsLink({
   return (
     <li className="">
       <a type={linkType} href={type} className="">
-        <div className="grid grid-rows-1 grid-flow-col grid-cols-auto-1fr gap-4">
+        <div className={className}>
           <img src={imagePath} alt={linkType} />
           <p className="text-base self-center">{text}</p>
         </div>

@@ -14,7 +14,7 @@ export default function WhatWeDo({ data }: PageType) {
           {data.homepage.whatWeDoTitle}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mt-3 lg:mt-8 xl:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 md:gap-10 xl:gap-6 mt-3 lg:mt-8 xl:mt-12">
           {data.homepage.whatWeDoCards.map((card, i) => {
             return (
               <Card
