@@ -13,7 +13,7 @@ export default function Banner({ data }: PageType) {
       <div className="wrapper overflow-hidden">
         <WrapperLarge>
           <HeaderImages />
-          <div className="grid place-items-center py-24">
+          <div className="grid place-items-center 2xl:py-24">
             <div className="background"></div>
             <PageHeader>{data.homepage.title}</PageHeader>
             <p className="text-xl text-center max-w-[400px] md:4/12 md:text-2xl">

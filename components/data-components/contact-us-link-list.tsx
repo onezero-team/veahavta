@@ -1,6 +1,5 @@
 import React from 'react'
 import { PageType } from '../types'
-import ContactUsFooterLink from './contact-us-footer-link'
 import ContactUsLink from './contact-us-link'
 
 export default function ContactUsLinkList({ data }: PageType) {

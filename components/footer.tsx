@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button } from './data-components/button'
 import FooterMenu from './data-components/footer-menu'
 import { PageType } from './types'
 import { WrapperLarge } from './wrapper'
