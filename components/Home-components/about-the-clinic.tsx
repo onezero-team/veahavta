@@ -9,7 +9,6 @@ export default function AboutTheClinic({ data }: PageType) {
     <section>
       <WrapperLarge className="">
         <div className="grid xl:grid-cols-2 gap-12 xl:gap-6 justify-items-center">
-          {/* <div className="grid xl:grid-cols-2 lg:gap-4 py-18 xl:py-10 justify-items-center"> */}
           <div className="">
             <img
               src="/icons/about-clinic.png"
@@ -17,9 +16,9 @@ export default function AboutTheClinic({ data }: PageType) {
               className="justify-self-center"
             />
           </div>
-          <div className="grid ">
-            <div className="grid xl:place-items-start justify-self-center">
-              <div className="">
+          <div className="grid place-items-center">
+            <div className="grid xl:place-items-start">
+              <div className="grid">
                 <a href="#" className="text-2xl text-header-blue xl:text-3xl">
                   {data.homepage.aboutHeading}
                 </a>

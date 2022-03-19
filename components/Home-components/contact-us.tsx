@@ -24,9 +24,9 @@ export default function ContactUs({ data }: PageType) {
       <section className="bg-contact-bg">
         <WrapperLarge className="relative">
           <ImgCircle className={`-${side}-36`} />
-          <div className="grid xl:grid-cols-2 gap-6 lg:gap-8 justify-items-center">
+          <div className="grid xl:grid-cols-2 gap-6 lg:gap-8 ">
             <div className="grid grid-rows-auto-1fr gap-2 ">
-              <div className="p-2 md:p-0 lg:place-items-start">
+              <div className="p-2 md:p-0">
                 <Button
                   className={
                     'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'
