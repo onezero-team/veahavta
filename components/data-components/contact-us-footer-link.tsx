@@ -12,14 +12,13 @@ export default function ContactUsFooterLink({
   imagePath: string
   className?: string
 }) {
-  //   console.log(imagePath, text,linkType)
   let type: string
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
     type = linkType === 'tel' ? 'tel:' : 'mailto'
   }
-  //   console.log(type)
+
   return (
     <li className="">
       <a type={linkType} href={type} className="">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PageType } from '../types'
 import { Button } from '../data-components/button'
 import SignupForm from '../form/sign-up-form'
@@ -9,17 +9,23 @@ import { useLocale } from '@/lib/hooks'
 
 export default function ContactUs({ data }: PageType) {
   const { dir } = useLocale()
-  let side, otherSide
-  dir === 'rtl'
-    ? ((side = 'right'), (otherSide = 'left'))
-    : ((side = 'left'), (otherSide = 'right'))
+
+  let side = 'right';
+  let otherSide='left';
+  if(dir === 'ltr'){
+    side='left';
+    otherSide='right';
+  }
+console.log(side)
+console.log(otherSide)
+
   return (
-    <section id="contact-us">
+    <section id="contact-us" className='relative overflow-hidden'>
       <div className="hidden lg:block h-16 bg-light"></div>
-      <section className="bg-contact-bg">
-        <WrapperLarge className="relative overflow-hidden">
-          <ImgCircle className={`-${side}-36 top-10`} />
           <ImgCircle className={`${otherSide}-0 -bottom-24`} />
+      <section className="bg-contact-bg">
+        <WrapperLarge className="relative">
+          <ImgCircle className={`-${side}-36`} />
           <div className="grid xl:grid-cols-2 gap-6 lg:gap-8 justify-items-center">
             <div className="grid grid-rows-auto-1fr gap-2 ">
               <div className="p-2 md:p-0 lg:place-items-start">

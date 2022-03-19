@@ -6,7 +6,6 @@ export default function ImgCircle({ className }: { className: string }) {
   const { dir } = useLocale()
   let side
   dir === 'rtl' ? (side = 'right') : (side = 'left')
-  console.log(side)
   return (
     <div className={`absolute ${className} md:block hidden`}>
       <img src="/icons/circle-svg.svg" alt="" />
