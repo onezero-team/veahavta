@@ -12,13 +12,14 @@ export default function ContactUsLink({
   text: string
   imagePath: string
   className?: string
-  linkValue?:string
+  linkValue?: string
 }) {
   let type: string
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    type = linkType === 'tel' ? `tel:${linkValue}` : 'mailto: insertmail@gmail.com'
+    type =
+      linkType === 'tel' ? `tel:${linkValue}` : 'mailto: insertmail@gmail.com'
   }
   return (
     <li className="">

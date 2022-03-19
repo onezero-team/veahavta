@@ -3,7 +3,7 @@ export type Common = {
     text: string
     linkType: string
     imagePath: string
-    linkValue:string
+    linkValue: string
   }>
   languageNames: Array<{
     he: string
