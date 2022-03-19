@@ -16,8 +16,6 @@ export default function ContactUs({ data }: PageType) {
     side = 'left'
     otherSide = 'right'
   }
-  console.log(side)
-  console.log(otherSide)
 
   return (
     <section id="contact-us" className="relative overflow-hidden">
