@@ -12,7 +12,7 @@ export default function Banner({ data }: PageType) {
     <div id="top-header" className="">
       <div className="wrapper overflow-hidden">
         <WrapperLarge>
-      <HeaderImages />
+          <HeaderImages />
           <div className="grid place-items-center py-24">
             <div className="background"></div>
             <PageHeader>{data.homepage.title}</PageHeader>
@@ -28,25 +28,24 @@ export default function Banner({ data }: PageType) {
           </div>
         </WrapperLarge>
 
-
         <style jsx>{`
-        div.wrapper {
-          margin-top: -${themePreval.height.header};
-          padding-top: ${themePreval.height.header};
-          position: relative;
-        }
-        div.background {
-          position: absolute;
-          z-index: -1;
-          inset: 0;
-          background: linear-gradient(
-            109.17deg,
-            rgba(1, 157, 177, 0.21) 38.49%,
-            #019db1 98.95%
-          );
-        }
-      `}</style>
+          div.wrapper {
+            margin-top: -${themePreval.height.header};
+            padding-top: ${themePreval.height.header};
+            position: relative;
+          }
+          div.background {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background: linear-gradient(
+              109.17deg,
+              rgba(1, 157, 177, 0.21) 38.49%,
+              #019db1 98.95%
+            );
+          }
+        `}</style>
       </div>
-    </div >
+    </div>
   )
 }

@@ -4,7 +4,6 @@ import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import { ChangeLangButton } from './data-components/change-language-button'
 import { PageType } from './types'
 
-
 export default function Header({ data }: PageType) {
   const { dir } = useLocale()
   return (
@@ -56,7 +55,6 @@ export default function Header({ data }: PageType) {
             </div>
           </ul>
         </div>
-        
       </header>
     </>
   )

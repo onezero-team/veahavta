@@ -10,19 +10,19 @@ import { useLocale } from '@/lib/hooks'
 export default function ContactUs({ data }: PageType) {
   const { dir } = useLocale()
 
-  let side = 'right';
-  let otherSide='left';
-  if(dir === 'ltr'){
-    side='left';
-    otherSide='right';
+  let side = 'right'
+  let otherSide = 'left'
+  if (dir === 'ltr') {
+    side = 'left'
+    otherSide = 'right'
   }
-console.log(side)
-console.log(otherSide)
+  console.log(side)
+  console.log(otherSide)
 
   return (
-    <section id="contact-us" className='relative overflow-hidden'>
+    <section id="contact-us" className="relative overflow-hidden">
       <div className="hidden lg:block h-16 bg-light"></div>
-          <ImgCircle className={`${otherSide}-0 -bottom-24`} />
+      <ImgCircle className={`${otherSide}-0 -bottom-24`} />
       <section className="bg-contact-bg">
         <WrapperLarge className="relative">
           <ImgCircle className={`-${side}-36`} />

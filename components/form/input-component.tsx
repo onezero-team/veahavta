@@ -6,7 +6,7 @@ export default function Input({ label, ...props }: any) {
       <div className="grid grid-rows-2">
         <label
           htmlFor={label}
-          className="place-self-start text-lg md:text-xl self-center pb-4 grid grid-cols-2 grid-cols-auto-1fr gap-2"
+          className="place-self-start text-lg md:text-xl self-center md:pb-2 grid grid-cols-2 grid-cols-auto-1fr gap-2"
         >
           {props.text}
         </label>
@@ -20,7 +20,7 @@ export default function Input({ label, ...props }: any) {
         />
       </div>
       {props.touch && props.error ? (
-        <p className="text-xs text-[#f44336] self-center">{props.error}</p>
+        <p className="text-sm md:text-base text-[#f44336] self-center pt-1 md:pt-2">{props.error}</p>
       ) : null}
     </div>
   )

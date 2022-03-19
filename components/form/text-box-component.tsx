@@ -5,7 +5,7 @@ export default function TextBox({ label, ...props }: any) {
     <div className="grid pt-4">
       <label
         htmlFor={label}
-        className="place-self-start text-lg md:text-xl pb-4 self-center"
+        className="place-self-start text-lg md:text-xl pb-2 self-center"
       >
         {props.text}
       </label>

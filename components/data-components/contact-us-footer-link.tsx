@@ -16,7 +16,7 @@ export default function ContactUsFooterLink({
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    type = linkType === 'tel' ? 'tel:' : 'mailto'
+    type = linkType === 'tel' ? 'tel:' : 'mailto: galor546@gmail.com'
   }
 
   return (

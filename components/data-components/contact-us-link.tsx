@@ -16,7 +16,7 @@ export default function ContactUsLink({
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    type = linkType === 'tel' ? 'tel:' : 'mailto'
+    type = linkType === 'tel' ? 'tel:' : 'mailto: veahavta.clinic@gmail.com'
   }
   return (
     <li className="">
