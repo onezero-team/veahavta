@@ -16,12 +16,13 @@ export default function ContactUsFooterLink({
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    const regexp = new RegExp("\\+?\\(?\\d*\\)? ?\\(?\\d+\\)?\\d*([\\s./-]?\\d{2,})+","g");
-    let num = regexp.exec(text);
-    if(num !== null)
-    type =`"tel:${num[0]}"`;
-    else
-    type ='mailto: veahavta.clinic@gmail.com'
+    const regexp = new RegExp(
+      '\\+?\\(?\\d*\\)? ?\\(?\\d+\\)?\\d*([\\s./-]?\\d{2,})+',
+      'g',
+    )
+    let num = regexp.exec(text)
+    if (num !== null) type = `"tel:${num[0]}"`
+    else type = 'mailto: veahavta.clinic@gmail.com'
   }
 
   return (
