@@ -24,7 +24,7 @@ export default function ContactUsLink({
         type={linkType}
         href={type}
         target="_blank"
-        className=""
+        className={className}
         rel="noreferrer"
       >
         <div className={className}>

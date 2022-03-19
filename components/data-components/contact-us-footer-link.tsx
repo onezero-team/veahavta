@@ -21,7 +21,7 @@ export default function ContactUsFooterLink({
 
   return (
     <li className="">
-      <a type={linkType} href={type} className="">
+      <a type={linkType} href={type} className={className}>
         <div className="grid grid-rows-1 grid-cols-auto-1fr gap-4">
           <div className="w-6 h-6 grid place-items-center">
             <img src={imagePath} alt={linkType} />
