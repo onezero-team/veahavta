@@ -3,6 +3,7 @@ export type Common = {
     text: string
     linkType: string
     imagePath: string
+    linkValue:string
   }>
   languageNames: Array<{
     he: string
@@ -36,6 +37,7 @@ common(locale: ${locale}) {
     text
     linkType
     imagePath
+    linkValue
   }
   appLinks {
     text

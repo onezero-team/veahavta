@@ -6,27 +6,20 @@ export default function ContactUsLink({
   text,
   imagePath,
   className,
+  linkValue,
 }: {
   linkType: string
   text: string
   imagePath: string
   className?: string
+  linkValue?:string
 }) {
   let type: string
-  console.log(text)
-
   if (linkType === 'address') {
     type = `https://www.google.co.il/maps/search/` + `${text}`
   } else {
-    const regexp = new RegExp(
-      '\\+?\\(?\\d*\\)? ?\\(?\\d+\\)?\\d*([\\s./-]?\\d{2,})+',
-      'g',
-    )
-    let num = regexp.exec(text)
-    if (num !== null) type = `"tel:${num[0]}"`
-    else type = 'mailto: veahavta.clinic@gmail.com'
+    type = linkType === 'tel' ? `tel:${linkValue}` : 'mailto: insertmail@gmail.com'
   }
-
   return (
     <li className="">
       <a

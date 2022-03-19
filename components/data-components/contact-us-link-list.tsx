@@ -11,6 +11,7 @@ export default function ContactUsLinkList({ data }: PageType) {
             linkType={contactUsLinks.linkType}
             text={contactUsLinks.text}
             imagePath={contactUsLinks.imagePath}
+            linkValue={contactUsLinks.linkValue}
             className="grid grid-rows-1 grid-flow-col grid-cols-auto-1fr gap-4"
             key={key}
           />

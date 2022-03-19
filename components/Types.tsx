@@ -24,6 +24,7 @@ export type Common = {
     text: string
     linkType: string
     imagePath: string
+    linkValue:string
   }>
   appLinks: Array<{
     text: string

@@ -13,6 +13,7 @@ export default function ContactUsFooterLinkList({ data }: PageType) {
                 linkType={contactUsLinks.linkType}
                 text={contactUsLinks.text}
                 imagePath={'/footer' + contactUsLinks.imagePath}
+                linkValue={contactUsLinks.linkValue}
                 className="grid grid-rows-1 grid-flow-col grid-cols-auto-1fr gap-4"
                 key={key}
               />
