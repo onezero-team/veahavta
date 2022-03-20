@@ -5,25 +5,17 @@ import SignupForm from '../form/sign-up-form'
 import { WrapperLarge } from '../wrapper'
 import ContactUsLinkList from '../data-components/contact-us-link-list'
 import ImgCircle from '../data-components/contact-us-img'
-import { useLocale } from '@/lib/hooks'
+
 
 export default function ContactUs({ data }: PageType) {
-  const { dir } = useLocale()
-
-  let side = 'right'
-  let otherSide = 'left'
-  if (dir === 'ltr') {
-    side = 'left'
-    otherSide = 'right'
-  }
 
   return (
     <section id="contact-us" className="relative overflow-hidden">
       <div className="hidden xl:block h-16 bg-light"></div>
-      <ImgCircle className={`${otherSide}-0 -bottom-24`} />
+      <ImgCircle className={`left-0 -bottom-24`} />
       <section className="bg-contact-bg">
         <WrapperLarge className="relative">
-          <ImgCircle className={`-${side}-36`} />
+          <ImgCircle className={`-right-36`} />
           <div className="grid xl:grid-cols-2 gap-6 lg:gap-8">
             <div className="grid grid-rows-auto-1fr gap-6 md:gap-10">
               <div className="">
