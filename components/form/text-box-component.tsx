@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TextBox({ label, ...props }: any) {
   return (
-    <div className="grid pt-4">
+    <div className="grid pt-2.5">
       <label
         htmlFor={label}
         className="place-self-start text-lg md:text-xl pb-2 self-center"

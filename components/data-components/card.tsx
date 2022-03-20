@@ -16,7 +16,7 @@ export default function Card({
         <img src={imagePath} alt={title} />
       </div>
       <div className="grid place-items-center">
-        <div className="p-5">
+        <div className="p-4">
           <h2 className="text-2xl text-header-blue font-bold md:text-3xl">
             {title}
           </h2>

@@ -8,7 +8,7 @@ export default function AboutTheClinic({ data }: PageType) {
   return (
     <section>
       <WrapperLarge className="">
-        <div className="grid xl:grid-cols-2 gap-12 xl:gap-6 justify-items-center">
+        <div className="grid xl:grid-cols-2 gap-10 xl:gap-5 justify-items-center">
           <div className="">
             <img
               src="/icons/about-clinic.png"
@@ -24,11 +24,11 @@ export default function AboutTheClinic({ data }: PageType) {
                 </a>
                 <h2
                   className="font-bold
-                            text-5xl"
+                            text-5xl pt-2.5"
                 >
                   {data.homepage.aboutTitle}
                 </h2>
-                <p className="text-lg pt-3">{data.homepage.aboutUsText}</p>
+                <p className="text-lg pt-5 lg:pt-10">{data.homepage.aboutUsText}</p>
                 <div
                   className="justify-self-center 
                             xl:justify-self-start"
