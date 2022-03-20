@@ -14,11 +14,11 @@ module.exports = {
       accent: '#D25C78',
     },
     fontFamily: {
-      body: ['"Assistant"', "sans-serif"],
-      display: ['"Assistant"', "sans-serif"],
-      sans: ['"Assistant"', "sans-serif"],
-      serif: ['"Assistant"', "sans-serif"],
-      mono: ['"Assistant"', "sans-serif"],
+      body: ['"Assistant"', 'sans-serif'],
+      display: ['"Assistant"', 'sans-serif'],
+      sans: ['"Assistant"', 'sans-serif'],
+      serif: ['"Assistant"', 'sans-serif'],
+      mono: ['"Assistant"', 'sans-serif'],
     },
     extend: {
       colors: {

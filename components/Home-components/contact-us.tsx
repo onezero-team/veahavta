@@ -21,7 +21,7 @@ export default function ContactUs({ data }: PageType) {
                   className={
                     'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'
                   }
-                  type='button'
+                  type="button"
                   text={data.homepage.contactUsHeading}
                 />
                 <h2 className="text-2xl md:text-4xl font-bold">

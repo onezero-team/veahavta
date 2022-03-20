@@ -8,8 +8,14 @@ export default function HeaderImages() {
       <Img imagePath="/icons/Rectangle-2.png" className="left-[35%] -top-0" />
       <Img imagePath="/icons/Rectangle-3.png" className="right-52 top-20" />
       <Img imagePath="/icons/Rectangle-4.png" className="right-0 top-[200px]" />
-      <Img imagePath="/icons/Rectangle-5.png" className="right-[20%] top-[500px]" />
-      <Img imagePath="/icons/Rectangle-6.png" className="right-2/3 top-[500px]" />
+      <Img
+        imagePath="/icons/Rectangle-5.png"
+        className="right-[20%] top-[500px]"
+      />
+      <Img
+        imagePath="/icons/Rectangle-6.png"
+        className="right-2/3 top-[500px]"
+      />
       <Img imagePath="/icons/Rectangle-7.png" className="left-0 top-52" />
     </div>
   )

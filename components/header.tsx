@@ -1,4 +1,3 @@
-
 import { useLocale } from '@/lib/hooks'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import { ChangeLangButton } from './data-components/change-language-button'
@@ -20,7 +19,12 @@ export default function Header({ data }: PageType) {
           <ul className="grid ">
             <div className="grid grid-cols-auto-1fr-auto">
               <div>
-                <Image src="/icons/veahavta-icon.svg" height={'62px'} width={'142px'} alt="ואהבת לוגו" />
+                <Image
+                  src="/icons/veahavta-icon.svg"
+                  height={'62px'}
+                  width={'142px'}
+                  alt="ואהבת לוגו"
+                />
                 {/* <img src="/icons/veahavta-icon.svg" height={'62px'} width={'142px'} alt="ואהבת לוגו" /> */}
               </div>
               <div>
@@ -63,7 +67,6 @@ export default function Header({ data }: PageType) {
                 </li>
               </div>
             </div>
-
           </ul>
         </div>
       </header>
