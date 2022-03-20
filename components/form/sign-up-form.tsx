@@ -7,6 +7,7 @@ import Input from './input-component'
 import TextBox from './text-box-component'
 
 export default function SignupForm({ data }: PageType) {
+  const [success, setSuccess] = useState(false)
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const formik = useFormik({
@@ -29,12 +30,12 @@ export default function SignupForm({ data }: PageType) {
         .max(15, 'Must be 2 characters or less')
         .required('Required'),
       email: Yup.string().email('Invalid Email').required('Required'),
-      phone: Yup.string()
+      tel: Yup.string()
         .matches(phoneRegExp, 'Phone number is not valid')
         .required('Required'),
     }),
     onSubmit: (values) => {
-      alert('Form submitted successfully !')
+      setSuccess(true);
     },
   })
 
@@ -80,14 +81,15 @@ export default function SignupForm({ data }: PageType) {
           text={data.common.contactUsFormMessage}
           formik={formik}
         />
-        <button type="submit">submit</button>
-        {/* <Button
+        {!success && <Button
           className={
             'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
           }
           type="submit"
           text={data.common.contactUsFormSendButton}
-        /> */}
+        />
+        }
+        {success && <div>success</div>}
       </div>
     </form>
   )

@@ -18,7 +18,7 @@ export default function Header({ data }: PageType) {
         <div className="mx-auto max-w-screen-lg p-2.5 md:px-6 bg-light rounded-lg">
           <ul className="grid">
             <div className="grid grid-cols-auto-1fr-auto gap-2.5 lg:gap-5">
-              <div className='grid place-items-center'>
+              <div className="grid place-items-center">
                 <Image
                   src="/icons/veahavta-icon.svg"
                   height={'62px'}
