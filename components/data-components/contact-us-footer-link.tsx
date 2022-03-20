@@ -26,14 +26,14 @@ export default function ContactUsFooterLink({
   return (
     <li className="">
       <Link href={type}>
-      <a type={linkType} className={className}>
-        <div className="grid grid-rows-1 grid-cols-auto-1fr gap-4">
-          <div className="w-6 h-6 grid place-items-center">
-            <img src={imagePath} alt={linkType} />
+        <a type={linkType} className={className}>
+          <div className="grid grid-rows-1 grid-cols-auto-1fr gap-4">
+            <div className="w-6 h-6 grid place-items-center">
+              <img src={imagePath} alt={linkType} />
+            </div>
+            <p className="text-base self-center">{text}</p>
           </div>
-          <p className="text-base self-center">{text}</p>
-        </div>
-      </a>
+        </a>
       </Link>
     </li>
   )

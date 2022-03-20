@@ -21,9 +21,9 @@ export default function AboutTheClinic({ data }: PageType) {
             <div className="grid xl:place-items-start">
               <div className="grid">
                 <Link href="#">
-                <a className="text-2xl text-header-blue xl:text-3xl">
-                  {data.homepage.aboutHeading}
-                </a>
+                  <a className="text-2xl text-header-blue xl:text-3xl">
+                    {data.homepage.aboutHeading}
+                  </a>
                 </Link>
                 <h2
                   className="font-bold

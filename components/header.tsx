@@ -23,7 +23,7 @@ export default function Header({ data }: PageType) {
                 return (
                   <li className="text-xl hidden md:block" key={key}>
                     <Link href={appLinks.relativeLink}>
-                    <a >{appLinks.text}</a>
+                      <a>{appLinks.text}</a>
                     </Link>
                   </li>
                 )
