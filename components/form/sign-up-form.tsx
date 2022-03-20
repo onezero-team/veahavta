@@ -7,15 +7,7 @@ import Input from './input-component'
 import TextBox from './text-box-component'
 
 export default function SignupForm({ data }: PageType) {
-  const [test, setTest] = useState('')
-  let x = 0
-  useEffect(() => {
-    if (x === 0) {
-      setTest('xxxxx')
-    } else {
-      setTest('fdsdsdf')
-    }
-  }, [])
+ 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const formik = useFormik({
