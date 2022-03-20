@@ -3,6 +3,7 @@ import { useLocale } from '@/lib/hooks'
 import OneZeroSkipToMainContent from './onezero-skip-to-main-content'
 import { ChangeLangButton } from './data-components/change-language-button'
 import { PageType } from './types'
+import Link from 'next/link'
 
 export default function Header({ data }: PageType) {
   const { dir } = useLocale()
@@ -21,7 +22,9 @@ export default function Header({ data }: PageType) {
               {data.common.appLinks.map((appLinks, key) => {
                 return (
                   <li className="text-xl hidden md:block" key={key}>
-                    <a href={appLinks.relativeLink}>{appLinks.text}</a>
+                    <Link href={appLinks.relativeLink}>
+                    <a >{appLinks.text}</a>
+                    </Link>
                   </li>
                 )
               })}

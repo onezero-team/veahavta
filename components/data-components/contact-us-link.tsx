@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import React from 'react'
 
 export default function ContactUsLink({
@@ -23,9 +24,10 @@ export default function ContactUsLink({
   }
   return (
     <li className="">
+      <Link href={type}>
       <a
         type={linkType}
-        href={type}
+        
         target="_blank"
         className=""
         rel="noreferrer"
@@ -35,6 +37,7 @@ export default function ContactUsLink({
           <p className="text-base self-center">{text}</p>
         </div>
       </a>
+      </Link>
     </li>
   )
 }

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import React from 'react'
 
 export default function ContactUsFooterLink({
@@ -24,7 +25,8 @@ export default function ContactUsFooterLink({
 
   return (
     <li className="">
-      <a type={linkType} href={type} className={className}>
+      <Link href={type}>
+      <a type={linkType} className={className}>
         <div className="grid grid-rows-1 grid-cols-auto-1fr gap-4">
           <div className="w-6 h-6 grid place-items-center">
             <img src={imagePath} alt={linkType} />
@@ -32,6 +34,7 @@ export default function ContactUsFooterLink({
           <p className="text-base self-center">{text}</p>
         </div>
       </a>
+      </Link>
     </li>
   )
 }

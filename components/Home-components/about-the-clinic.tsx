@@ -3,6 +3,7 @@ import React from 'react'
 import { PageType } from '../types'
 import { Button } from '../data-components/button'
 import { WrapperLarge } from '../wrapper'
+import Link from 'next/link'
 
 export default function AboutTheClinic({ data }: PageType) {
   return (
@@ -19,16 +20,20 @@ export default function AboutTheClinic({ data }: PageType) {
           <div className="grid place-items-center">
             <div className="grid xl:place-items-start">
               <div className="grid">
-                <a href="#" className="text-2xl text-header-blue xl:text-3xl">
+                <Link href="#">
+                <a className="text-2xl text-header-blue xl:text-3xl">
                   {data.homepage.aboutHeading}
                 </a>
+                </Link>
                 <h2
                   className="font-bold
                             text-5xl pt-2.5"
                 >
                   {data.homepage.aboutTitle}
                 </h2>
-                <p className="text-lg pt-5 lg:pt-10">{data.homepage.aboutUsText}</p>
+                <p className="text-lg pt-5 lg:pt-10">
+                  {data.homepage.aboutUsText}
+                </p>
                 <div
                   className="justify-self-center 
                             xl:justify-self-start"
