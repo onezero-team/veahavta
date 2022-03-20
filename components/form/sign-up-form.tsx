@@ -35,7 +35,7 @@ export default function SignupForm({ data }: PageType) {
         .required('Required'),
     }),
     onSubmit: (values) => {
-      setSuccess(true);
+      setSuccess(true)
     },
   })
 
@@ -81,14 +81,15 @@ export default function SignupForm({ data }: PageType) {
           text={data.common.contactUsFormMessage}
           formik={formik}
         />
-        {!success && <Button
-          className={
-            'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
-          }
-          type="submit"
-          text={data.common.contactUsFormSendButton}
-        />
-        }
+        {!success && (
+          <Button
+            className={
+              'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
+            }
+            type="submit"
+            text={data.common.contactUsFormSendButton}
+          />
+        )}
         {success && <div>success</div>}
       </div>
     </form>

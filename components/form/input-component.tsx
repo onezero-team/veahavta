@@ -6,7 +6,7 @@ export default function Input({ label, ...props }: any) {
       <div className="grid grid-rows-2">
         <label
           htmlFor={label}
-          className="place-self-start text-lg md:text-xl self-center md:pb-2.5 grid grid-cols-2 grid-cols-auto-1fr gap-2.5"
+          className="place-self-start text-lg md:text-xl self-center md:pb-2.5 grid gap-2.5"
         >
           {props.text}
         </label>
