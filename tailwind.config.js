@@ -13,6 +13,13 @@ module.exports = {
       primary: '#01559A',
       accent: '#D25C78',
     },
+    fontFamily: {
+      body: ['"Assistant"', "sans-serif"],
+      display: ['"Assistant"', "sans-serif"],
+      sans: ['"Assistant"', "sans-serif"],
+      serif: ['"Assistant"', "sans-serif"],
+      mono: ['"Assistant"', "sans-serif"],
+    },
     extend: {
       colors: {
         'header-blue': '#4E47F9',
@@ -32,6 +39,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
+        'auto-1fr-auto': 'auto 1fr auto',
       },
 
       gridTemplateRows: {

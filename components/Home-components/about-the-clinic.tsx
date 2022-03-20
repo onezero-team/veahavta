@@ -20,7 +20,7 @@ export default function AboutTheClinic({ data }: PageType) {
           <div className="grid place-items-center">
             <div className="grid xl:place-items-start">
               <div className="grid">
-                <Link href="#">
+                <Link href="/">
                   <a className="text-2xl text-header-blue xl:text-3xl">
                     {data.homepage.aboutHeading}
                   </a>

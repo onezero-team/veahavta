@@ -23,6 +23,7 @@ export default function Banner({ data }: PageType) {
               className={
                 'text-xl font-bold bg-header-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
               }
+              type='button'
               text={data.homepage.getToKnowUsButton}
             />
           </div>

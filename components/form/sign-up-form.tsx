@@ -1,13 +1,25 @@
-import React from 'react'
-import { useFormik, Formik, Form, Field } from 'formik'
+import React, { useEffect, useState } from 'react'
+import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Button } from '../data-components/button'
 import { PageType } from '../types'
 import Input from './input-component'
 import TextBox from './text-box-component'
-import useTranslation from 'next-translate/useTranslation'
+
 
 export default function SignupForm({ data }: PageType) {
+  const [test, setTest] = useState('');
+  let x = 0;
+  useEffect(() => {
+
+    if (x === 0) {
+      setTest('xxxxx');
+    }
+    else {
+      setTest('fdsdsdf');
+    }
+    
+  },[]);
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const formik = useFormik({
@@ -15,7 +27,7 @@ export default function SignupForm({ data }: PageType) {
       firstName: '',
       lastName: '',
       email: '',
-      phone: '',
+      tel: '',
       text: '',
     },
     validationSchema: Yup.object({
@@ -71,8 +83,8 @@ export default function SignupForm({ data }: PageType) {
             label="tel"
             text={data.common.contactUsFormPhone}
             formik={formik}
-            touch={formik.touched.phone}
-            error={formik.errors.phone}
+            touch={formik.touched.tel}
+            error={formik.errors.tel}
           />
         </div>
 
@@ -81,13 +93,14 @@ export default function SignupForm({ data }: PageType) {
           text={data.common.contactUsFormMessage}
           formik={formik}
         />
-        <Button
+        <button type="submit">submit</button>
+        {/* <Button
           className={
             'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
           }
           type="submit"
           text={data.common.contactUsFormSendButton}
-        />
+        /> */}
       </div>
     </form>
   )
