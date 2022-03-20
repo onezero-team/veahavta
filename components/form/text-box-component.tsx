@@ -10,7 +10,7 @@ export default function TextBox({ label, ...props }: any) {
         {props.text}
       </label>
       <input
-        className="h-24 md:h-36 rounded-lg border-solid box-border shadow-4xl"
+        className="h-24 md:h-36 rounded-lg border-solid box-border shadow-4xl px-2"
         name={label}
         type="text"
         onBlur={props.formik.handleBlur}

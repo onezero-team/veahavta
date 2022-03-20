@@ -16,11 +16,11 @@ export default function Header({ data }: PageType) {
       <header className="h-header z-10 pt-4 px-4">
         <div className="mx-auto max-w-screen-lg p-4 md:px-8 bg-light rounded-lg">
           <ul className="grid grid-cols-2 md:grid-cols-7">
-            <div className="grid grid-cols-2 md:grid-cols-5 md:col-span-4 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 md:col-span-4 auto-1fr">
               <img src="/icons/veahavta-icon.svg" alt="ואהבת לוגו" />
               {data.common.appLinks.map((appLinks, key) => {
                 return (
-                  <li className="text-xl text-center hidden md:block" key={key}>
+                  <li className="text-xl " key={key}>
                     <a href={appLinks.relativeLink}>{appLinks.text}</a>
                   </li>
                 )

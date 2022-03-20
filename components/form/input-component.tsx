@@ -11,7 +11,7 @@ export default function Input({ label, ...props }: any) {
           {props.text}
         </label>
         <input
-          className="rounded-lg border-solid box-border shadow-4xl min-w-[75px]"
+          className="rounded-lg border-solid box-border shadow-4xl min-w-[75px] px-2"
           name={label}
           type="text"
           onBlur={props.formik.handleBlur}
