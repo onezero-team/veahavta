@@ -40,6 +40,8 @@ module.exports = {
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
         'auto-1fr-auto': 'auto 1fr auto',
+        '4-auto-1fr': 'auto auto auto auto 1fr',
+        '4-auto': 'auto auto auto auto'
       },
 
       gridTemplateRows: {

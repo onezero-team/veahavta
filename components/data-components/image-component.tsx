@@ -7,16 +7,16 @@ export default function Img({
   imagePath,
   className,
   width,
-  height
+  height,
 }: {
   imagePath: string
   className: string
-  width:string
-  height:string
+  width: string
+  height: string
 }) {
   return (
     <div className={`absolute ${className}`}>
-      <Image src={imagePath} alt="" width={width} height={height}/>
+      <Image src={imagePath} alt="" width={width} height={height} />
       {/* <img src={imagePath} alt="" /> */}
     </div>
   )

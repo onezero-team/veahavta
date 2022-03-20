@@ -16,21 +16,20 @@ export default function Header({ data }: PageType) {
       />
       <header className="h-header z-10 pt-4 px-4">
         <div className="mx-auto max-w-screen-lg p-2.5 md:px-6 bg-light rounded-lg">
-          <ul className="grid ">
-            <div className="grid grid-cols-auto-1fr-auto">
-              <div>
+          <ul className="grid">
+            <div className="grid grid-cols-auto-1fr-auto gap-2.5 lg:gap-5">
+              <div className='grid place-items-center'>
                 <Image
                   src="/icons/veahavta-icon.svg"
                   height={'62px'}
                   width={'142px'}
                   alt="ואהבת לוגו"
                 />
-                {/* <img src="/icons/veahavta-icon.svg" height={'62px'} width={'142px'} alt="ואהבת לוגו" /> */}
               </div>
-              <div>
+              <div className="grid grid-cols-4-auto-1fr gap-2.5 lg:gap-5 place-items-center">
                 {data.common.appLinks.map((appLinks, key) => {
                   return (
-                    <li className="text-xl hidden md:block" key={key}>
+                    <li className="text-2xl hidden md:block" key={key}>
                       <Link href={`/${appLinks.relativeLink}`}>
                         <a>{appLinks.text}</a>
                       </Link>
@@ -38,8 +37,7 @@ export default function Header({ data }: PageType) {
                   )
                 })}
               </div>
-              {/*  grid-cols-5 gap-2.5 justify-self-end md:col-span-3 place-items-center */}
-              <div className="grid grid-cols-5 gap-x-2.5">
+              <div className="grid grid-cols-5 gap-x-2.5 place-items-center">
                 <li>
                   <ChangeLangButton className="" lang="ar">
                     {data.common.languageNames[0].ar}
