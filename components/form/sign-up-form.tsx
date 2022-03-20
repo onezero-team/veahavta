@@ -68,7 +68,7 @@ export default function SignupForm({ data }: PageType) {
             error={formik.errors.email}
           />
           <Input
-            label="phone"
+            label="tel"
             text={data.common.contactUsFormPhone}
             formik={formik}
             touch={formik.touched.phone}
