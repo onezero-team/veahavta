@@ -1,14 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../asstst/logo.svg'
-import israelFlag from '../asstst/israelFlag.svg'
-import ukFlag from '../asstst/ukFlag.svg'
-import etyopyaFlag from '../asstst/etyopyaFlag.svg'
-import aritreyFlag from '../asstst/aritreyFlag.svg'
-import arabFlag from '../asstst/arabFlag.svg'
+import logo from '../assets/images/logo.svg'
+import israelFlag from '../assets/images/israel-flag.svg'
+import ukFlag from '../assets/images/uk-flag.svg'
+import etyopyaFlag from '../assets/images/etyopya-flag.svg'
+import aritreyFlag from '../assets/images/aritrey-flag.svg'
+import arabFlag from '../assets/images/arab-flag.svg'
 import Link from 'next/link'
 import { Router } from 'next/router'
-import About from 'pages/about'
 
 export default function Nav() {
   return (

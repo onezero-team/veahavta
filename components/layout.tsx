@@ -4,7 +4,6 @@ import Main from '@/components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
 import React from 'react'
-import About from 'pages/about'
 
 export default function Layout({ children, pageProps }: any) {
   const { dir, locale } = useLocale()

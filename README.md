@@ -9,7 +9,7 @@
 
 This repo uses Dato CMS for the content.
 
-This project has 5 languages (Hebrew, English, Arabic, Amharic, tigrinya).
+This project has 5 languages (Hebrew, English, Arabic, Amharic, Tigrinya).
 
 ## Deployment
 

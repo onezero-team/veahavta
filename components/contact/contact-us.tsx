@@ -4,36 +4,34 @@ import Header from '@/components/header'
 import Main from '@/components/main'
 import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
-import { Button } from './button'
-import ContactDetails from './contactDetails'
-import ContactForm from './contactForm'
+import { Button } from '../button'
+import ContactDetails from './contact-details'
+import ContactForm from './contact-form'
 import { AiTwotonePhone } from 'react-icons/ai'
 import { HiMail } from 'react-icons/hi'
 import { MdLocationOn } from 'react-icons/md'
-import { Circle } from './circle.js'
+import { Circle } from '../circle.js'
 
-export default function Contact() {
-// {
-//    children,
-//    pageProps }
-//    : any
+export default function ContactUs({ children, pageProps, data }: any) {
   const { dir, locale } = useLocale()
+
+  console.log('data', data.homepage)
   return (
     <div
       id="contact_us"
       className="w-[100%] h-[80%] bg-cyan-100  flex flex-row absolute"
     >
-      <Circle className="left"></Circle>
+      <div className="w-[150px] h-[230px] overflow-hidden">
+        <Circle className="left"></Circle>
+      </div>
       <Circle className="right"></Circle>
-      <div className="text-right pt-32 basis-1/2 pr-52">
+      {/* </div> */}
+      <div className="text-right pt-32 basis-1/2">
         <Button className="bg-light text-primary hover:bg-primary hover:text-light">
-          צרו קשר
+          {data.homepage.contactUsHeading}
         </Button>
-        <div className="text-3xl py-4">אנחנו פה בשבילכם </div>
-        <div className="pb-4">
-          המרפאה פועלת בימים ג&apos; וה&apos; בין השעות 16:00 עד <br />
-          19:00 וביום שבת בין השעות 10:00 עד 14:00
-        </div>
+        <div className="text-3xl py-4">{data.homepage.contactUsTitle}</div>
+        <div className="pb-4">{data.homepage.contactUsText}</div>
         <div className=" grid grid-cols-2 gap-4 place-content-center">
           <ContactDetails
             text="עברית, אנגלית, ערבית"

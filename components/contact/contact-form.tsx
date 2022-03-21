@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Formik, Form } from 'formik'
 import Input from './input'
-import { Button } from './button'
+import { Button } from '../button'
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('')

@@ -1,20 +1,25 @@
 import React from 'react'
-import { Button } from '../components/button'
+import { Button } from '../button'
 import Image from 'next/image'
-import Nav from '../components/nav'
-import Img1 from '../asstst/img1.svg'
-import Img2 from '../asstst/img2.svg'
-import Img3 from '../asstst/img3.svg'
-import Img4 from '../asstst/img4.svg'
-import Img5 from '../asstst/img5.svg'
-import Img6 from '../asstst/img6.svg'
-import Img7 from '../asstst/img7.svg'
+import { PageHeader } from '../text'
+import Nav from '../nav'
+import Img1 from '../../assets/images/img1.svg'
+import Img2 from '../../assets/images/img2.svg'
+import Img3 from '../../assets/images/img3.svg'
+import Img4 from '../../assets/images/img4.svg'
+import Img5 from '../../assets/images/img5.svg'
+import Img6 from '../../assets/images/img6.svg'
+import Img7 from '../../assets/images/img7.svg'
+import { PageType } from 'pages'
 
-export default function Home() {
+export default function Banner({ data }: PageType) {
+  const [title, moreInfo] = data.homepage.title.split('-')
   return (
     <div
-      id="home"
-      className="relative py-5 bg-gradient-to-l from-cyan-600 via-cyan-500  to-cyan-100  w-full h-screen overflow-hidden"
+      id="banner"
+      className="relative py-5 bg-gradient-to-l
+    from-cyan-600 via-cyan-500  to-cyan-100  
+    w-full h-screen overflow-hidden"
     >
       <div
         id="img1"
@@ -62,12 +67,12 @@ export default function Home() {
 
       <div className="mt-48">
         <div className={`font-bold text-5xl text-center`}>
-          מרפאת ואהבת- <br />
-          בריאות שוויונית לכולם
+          <PageHeader>
+            {title} - <br /> {moreInfo}
+          </PageHeader>
         </div>
         <div className="mt-8 text-center">
-          שירותי רפואה כלליים למשפחה, <br />
-          ומגוון שירותי רפואה מקצועיים.
+          <p>{data.homepage.description}</p>
         </div>
         <div className="text-center">
           <Button
@@ -76,7 +81,7 @@ export default function Home() {
             hover:bg-light 
             hover:text-primary"
           >
-            הכירו אותנו
+            {data.homepage.getToKnowUsButton}
           </Button>
         </div>
       </div>

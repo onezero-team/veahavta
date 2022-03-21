@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button } from '../components/button'
 import Image from 'next/image'
-import Hands from '../asstst/hands.svg'
+import Hands from '../../assets/images/hands.svg'
+import { Button } from '../button'
+import { PageType } from 'pages'
 
-export default function About() {
+export default function AboutTheClinic({ data }: PageType) {
   return (
     <div
       id="about"
@@ -16,17 +17,13 @@ export default function About() {
       </div>
       <div id="textWarp" className={`px-12 mx-5 text-right basis-1/2`}>
         <div id="title" className={`text-rose`}>
-          אודות המרפאה
+          {data.homepage.aboutHeading}
         </div>
         <div id="header" className={`font-bold text-4xl mt-5`}>
-          המטרה: שירותי בריאות <br />
-          מצויינים לכל איש
-          <br /> ואישה בישראל.
+          {data.homepage.aboutTitle}
         </div>
         <div id="description" className={`mt-5`}>
-          המרפאה פועלת כולה בהתנדבות ומספקת שירותים לאנשים שנמנעו מהם תושבות
-          רשמית בישראל כתוצאה מעקירה מארץ המקור. צוות המרפאה עושה מאמצים
-          משמעותיים לספק בהתנדבות מלאה את כל סוגי הטיפול והעזרה הנדרשים.
+          <p>{data.homepage.aboutUsText}</p>
         </div>
         <Button
           className="bg-rose 
@@ -35,7 +32,7 @@ export default function About() {
                  hover:border-2 border-Rose-400 
                  hover:text-rose"
         >
-          קרא עוד
+          {data.homepage.aboutUsButton}
         </Button>
       </div>
     </div>
