@@ -36,7 +36,6 @@ export default function SignupForm({ data }: PageType) {
     }),
     onSubmit: (values) => {
       setSuccess(true)
-      
     },
   })
 
