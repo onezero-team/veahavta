@@ -5,7 +5,6 @@ import { Button } from '../data-components/button'
 import themePreval from '@/lib/theme.preval'
 import { WrapperLarge } from '../wrapper'
 import HeaderImages from '../data-components/header-images'
-import Header from '../header'
 
 export default function Banner({ data }: PageType) {
   return (
@@ -21,7 +20,7 @@ export default function Banner({ data }: PageType) {
             </p>
             <Button
               className={
-                'text-xl font-bold bg-header-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
+                'text-xl font-bold bg-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
               }
               type="button"
               text={data.homepage.getToKnowUsButton}

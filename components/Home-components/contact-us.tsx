@@ -9,9 +9,9 @@ import ImgCircle from '../data-components/contact-us-img'
 export default function ContactUs({ data }: PageType) {
   return (
     <section id="contact-us" className="relative overflow-hidden">
-      <div className="hidden xl:block h-16 bg-light"></div>
+      <div className="hidden xl:block h-16 bg-brown-bg"></div>
       <ImgCircle className={`left-0 -bottom-24`} />
-      <section className="bg-contact-bg">
+      <section className="bg-azure">
         <WrapperLarge className="relative">
           <ImgCircle className={`-right-36`} />
           <div className="grid xl:grid-cols-2 gap-6 lg:gap-8">
@@ -19,7 +19,7 @@ export default function ContactUs({ data }: PageType) {
               <div className="">
                 <Button
                   className={
-                    'text-xl md:text-3xl bg-light text-header-blue px-8 py-2 rounded-full mb-5 font-bold'
+                    'text-xl md:text-3xl bg-light text-blue px-8 py-2 rounded-full mb-5 font-bold'
                   }
                   type="button"
                   text={data.homepage.contactUsHeading}

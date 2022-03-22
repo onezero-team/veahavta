@@ -11,7 +11,7 @@ export default function Input({ label, ...props }: any) {
           {props.text}
         </label>
         <input
-          className="rounded-lg border-solid box-border shadow-4xl min-w-[75px] px-2"
+          className="rounded-lg border-solid box-border shadow-4xl min-w-[75px] px-2 focus:rounded-lg"
           name={label}
           type="text"
           onBlur={props.formik.handleBlur}
@@ -21,7 +21,7 @@ export default function Input({ label, ...props }: any) {
       </div>
       {props.touch && props.error ? (
         <p className="text-sm md:text-base text-[#f44336] self-center pt-1 md:pt-2.5">
-          {props.error}
+          {props.error}שדגכדעכגגעגכעגכעגכעגכעגכעגכעגכעגכעג
         </p>
       ) : null}
     </div>

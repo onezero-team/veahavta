@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import { useLocale } from '@/lib/hooks'
+import Image from 'next/image'
 import React from 'react'
 
 export default function ImgCircle({ className }: { className: string }) {
@@ -8,7 +8,7 @@ export default function ImgCircle({ className }: { className: string }) {
   dir === 'rtl' ? (side = 'right') : (side = 'left')
   return (
     <div className={`absolute ${className} md:block hidden`}>
-      <img src="/icons/circle-svg.svg" alt="" />
-    </div>
+      <Image src={"/icons/circle.png"} alt={"circle"} width={'318px'} height={'318px'}/>
+          </div>
   )
 }

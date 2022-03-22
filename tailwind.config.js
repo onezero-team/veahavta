@@ -12,6 +12,7 @@ module.exports = {
       light: 'white',
       primary: '#01559A',
       accent: '#D25C78',
+      red: '#D25C78',
     },
     fontFamily: {
       body: ['"Assistant"', 'sans-serif'],
@@ -25,6 +26,11 @@ module.exports = {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
         'icon-bg': '#4E47F9',
+        'success': '#7AD17C',
+        'red': '#D25C78',
+        'blue':'#01559A',
+        'brown-bg': '#E5E5E5',
+        'azure': '#E2F7F9'
       },
       text: {
         medium: 'md:text-xl',
@@ -40,8 +46,10 @@ module.exports = {
       gridTemplateColumns: {
         'auto-1fr': 'auto 1fr',
         'auto-1fr-auto': 'auto 1fr auto',
-        '4-auto-1fr': 'auto auto auto auto 1fr',
+        'auto-auto-1fr': 'auto auto 1fr',
+        '2-auto': 'auto auto',
         '4-auto': 'auto auto auto auto',
+        '4-auto-1fr': 'auto auto auto auto 1fr',
       },
 
       gridTemplateRows: {

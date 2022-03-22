@@ -26,7 +26,7 @@ export default function Header({ data }: PageType) {
                   alt="ואהבת לוגו"
                 />
               </div>
-              <div className="grid grid-cols-4-auto-1fr gap-2.5 lg:gap-5 place-items-center">
+              <div className="grid grid-cols-4-auto-1fr gap-2.5 lg:gap-10 place-items-center">
                 {data.common.appLinks.map((appLinks, key) => {
                   return (
                     <li className="text-2xl hidden md:block" key={key}>
