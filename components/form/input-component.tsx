@@ -21,7 +21,7 @@ export default function Input({ label, ...props }: any) {
       </div>
       {props.touch && props.error ? (
         <p className="text-sm md:text-base text-[#f44336] self-center pt-1 md:pt-2.5">
-          {props.error}שדגכדעכגגעגכעגכעגכעגכעגכעגכעגכעגכעג
+          {props.error}
         </p>
       ) : null}
     </div>
