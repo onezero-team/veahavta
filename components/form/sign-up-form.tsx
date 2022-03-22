@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Button } from '../data-components/button'
@@ -84,17 +84,14 @@ export default function SignupForm({ data }: PageType) {
         {!success && (
           <Button
             className={
-              'text-lg md:text-2xl font-bold bg-header-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
+              'text-lg md:text-2xl font-bold bg-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
             }
             type="submit"
             text={data.common.contactUsFormSendButton}
           />
         )}
-        {success && <div>success</div>}
+        {success && <div className='text-lg md:text-2xl font-bold bg-success text-light px-8 py-2 rounded-full mt-10 font-bold mb-10 max-w-[150px] text-center'>form sent</div>}
       </div>
     </form>
   )
-}
-function useField(props: any): [any, any, any] {
-  throw new Error('Function not implemented.')
 }

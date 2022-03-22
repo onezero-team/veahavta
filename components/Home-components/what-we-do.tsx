@@ -5,7 +5,7 @@ import { WrapperLarge } from '../wrapper'
 
 export default function WhatWeDo({ data }: PageType) {
   return (
-    <WrapperLarge className='bg-brown-bg'>
+    <WrapperLarge className="bg-brown-bg">
       <section className="grid place-items-center gap-2.5">
         <div className="text-lg md:text-2xl text-[#D25C78] text-center">
           {data.homepage.whatWeDoHeading}

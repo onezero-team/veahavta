@@ -8,7 +8,12 @@ export default function ImgCircle({ className }: { className: string }) {
   dir === 'rtl' ? (side = 'right') : (side = 'left')
   return (
     <div className={`absolute ${className} md:block hidden`}>
-      <Image src={"/icons/circle.png"} alt={"circle"} width={'318px'} height={'318px'}/>
-          </div>
+      <Image
+        src={'/icons/circle.png'}
+        alt={'circle'}
+        width={'318px'}
+        height={'318px'}
+      />
+    </div>
   )
 }

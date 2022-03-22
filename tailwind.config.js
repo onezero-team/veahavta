@@ -26,11 +26,11 @@ module.exports = {
         'header-blue': '#4E47F9',
         'contact-bg': '#F4F3FD',
         'icon-bg': '#4E47F9',
-        'success': '#7AD17C',
-        'red': '#D25C78',
-        'blue':'#01559A',
+        success: '#7AD17C',
+        red: '#D25C78',
+        blue: '#01559A',
         'brown-bg': '#E5E5E5',
-        'azure': '#E2F7F9'
+        azure: '#E2F7F9',
       },
       text: {
         medium: 'md:text-xl',

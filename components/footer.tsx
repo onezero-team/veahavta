@@ -1,4 +1,3 @@
-
 import FooterMenu from './data-components/footer-menu'
 import { PageType } from './types'
 import { WrapperLarge } from './wrapper'

@@ -7,16 +7,18 @@ import Image from 'next/image'
 
 export default function AboutTheClinic({ data }: PageType) {
   return (
-    <section className='bg-brown-bg'>
+    <section className="bg-brown-bg">
       <WrapperLarge className="">
         <div className="grid xl:grid-cols-2 gap-10 xl:gap-5 justify-items-center">
           <div className="">
-            <Image src={"/icons/about-clinic.png"}
-              alt={"אודות המרפאה"}
-              className={"justify-self-center"}
+            <Image
+              src={'/icons/about-clinic.png'}
+              alt={'אודות המרפאה'}
+              className={'justify-self-center'}
               width={'688px'}
-              height={'618px'}/>
-                  </div>
+              height={'618px'}
+            />
+          </div>
           <div className="grid place-items-center">
             <div className="grid xl:place-items-start">
               <div className="grid">
