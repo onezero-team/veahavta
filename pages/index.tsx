@@ -1,9 +1,14 @@
+import { PageType } from '@/components/types'
 import { Button } from '@/components/button'
 import { Common, COMMON_QUERY_STRING } from '@/lib/interface'
 import themePreval from '@/lib/theme.preval'
 import { NextPageContext } from 'next'
-import { PageHeader } from '../components/text'
 import { request } from '../lib/datocms'
+import Banner from '../components/home-components/banner'
+import WhatWeDo from '../components/home-components/what-we-do'
+import AboutTheClinic from '../components/home-components/about-the-clinic'
+import ContactUs from '../components/home-components/contact-us'
+import { HOMEPAGE_QUERY } from '../components/types'
 
 type PageType = {
   data: {
@@ -56,6 +61,7 @@ query Homepage {
   ${COMMON_QUERY_STRING(locale)}
 }`
 
+
 export async function getStaticProps({ locale }: NextPageContext) {
   const data = await request({
     query: HOMEPAGE_QUERY(locale as string),
@@ -73,67 +79,6 @@ export default function Home({ data }: PageType) {
       <AboutTheClinic data={data} />
       <WhatWeDo data={data} />
       <ContactUs data={data} />
-    </>
-  )
-}
-
-const Banner = ({ data }: PageType) => {
-  return (
-    <>
-      <div className="wrapper min-h-screen-50">
-        <div className="background"></div>
-        <PageHeader>{data.homepage.title}</PageHeader>
-        <p>{data.homepage.description}</p>
-        <Button>{data.homepage.getToKnowUsButton}</Button>
-      </div>
-      <style jsx>{`
-        div.wrapper {
-          margin-top: -${themePreval.height.header};
-          padding-top: ${themePreval.height.header};
-          position: relative;
-        }
-        div.background {
-          position: absolute;
-          z-index: -1;
-          inset: 0;
-          background: linear-gradient(
-            109.17deg,
-            rgba(1, 157, 177, 0.21) 38.49%,
-            #019db1 98.95%
-          );
-        }
-      `}</style>
-    </>
-  )
-}
-
-const AboutTheClinic = ({ data }: PageType) => {
-  return (
-    <>
-      <h2 className="text-lg">
-        <span className="text-md text-accent">
-          {data.homepage.aboutHeading}
-        </span>
-        {data.homepage.aboutTitle}
-      </h2>
-      <p>{data.homepage.aboutTitle}</p>
-      <Button>{data.homepage.aboutUsButton}</Button>
-    </>
-  )
-}
-const WhatWeDo = ({ data }: PageType) => {
-  return <></>
-}
-const ContactUs = ({ data }: PageType) => {
-  return (
-    <>
-      <h2>{data.homepage.contactUsHeading}</h2>
-      <a
-        type={data.common.contactUsLinks[0].linkType}
-        href={`mailto:${data.common.contactUsLinks[0].text}`}
-      >
-        {data.common.contactUsLinks[0].text}
-      </a>
     </>
   )
 }

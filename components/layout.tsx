@@ -9,10 +9,10 @@ export default function Layout({ children, pageProps }: any) {
   const { dir, locale } = useLocale()
   return (
     <>
-      <div className="app-wrapper" dir={dir}>
-        <Header />
+      <div className="app-wrapper font-serif" dir={dir}>
+        <Header data={children.props.data} />
         <Main>{children}</Main>
-        <Footer />
+        <Footer data={children.props.data} />
       </div>
       <style jsx global>
         {`

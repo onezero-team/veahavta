@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 export function useLocale() {
   const router = useRouter()
   let { locale } = router
+
   if (locale === undefined) {
     locale = 'he'
   }

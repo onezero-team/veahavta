@@ -1,4 +1,5 @@
 import { GraphQLClient } from 'graphql-request'
+
 export function request({ query, variables, preview }: any) {
   const endpoint = preview
     ? `https://graphql.datocms.com/preview`
@@ -8,5 +9,6 @@ export function request({ query, variables, preview }: any) {
       authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
     },
   })
+
   return client.request(query, variables)
 }

@@ -21,6 +21,13 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/home-components",
+    "components/data-components/card.tsx",
+    "components/footer"
+  ],
   "exclude": ["node_modules"]
 }

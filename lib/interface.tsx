@@ -3,6 +3,14 @@ export type Common = {
     text: string
     linkType: string
     imagePath: string
+    linkValue: string
+  }>
+  languageNames: Array<{
+    he: string
+    en: string
+    ar: string
+    am: string
+    ti: string
   }>
   contactUsFormFirstName: string
   contactUsFormLastName: string
@@ -10,6 +18,10 @@ export type Common = {
   contactUsFormPhone: string
   contactUsFormMessage: string
   contactUsFormSendButton: string
+  footerMenuTitle: string
+  footerContactUsTitle: string
+  footerScheduleButton: string
+  footerSupportUsButton: string
 }
 
 export const COMMON_QUERY_STRING = (locale: string) => `
@@ -26,6 +38,11 @@ common(locale: ${locale}) {
     linkType
     linkValue
     imagePath
+    linkValue
+  }
+  appLinks {
+    text
+    relativeLink
   }
   appLinks {
     text
