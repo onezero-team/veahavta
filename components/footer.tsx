@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function Footer({ data }: PageType) {
   return (
     <WrapperLarge>
-      <footer className="bg-light gap-2.5 grid md:grid-cols-2 lg:grid-cols-4 ">
+      <footer className="bg-light gap-6 grid md:grid-cols-2 lg:grid-cols-4 ">
         <Image
           src="/icons/veahavta-icon.svg"
           height={'62px'}

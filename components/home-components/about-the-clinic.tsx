@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function AboutTheClinic({ data }: PageType) {
   return (
-    <section className="bg-brown-bg">
+    <section id="about-us" className="bg-brown-bg">
       <WrapperLarge className="">
         <div className="grid xl:grid-cols-2 gap-10 xl:gap-5 justify-items-center">
           <div className="">
