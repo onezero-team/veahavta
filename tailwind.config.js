@@ -53,7 +53,7 @@ module.exports = {
       },
 
       gridTemplateRows: {
-        '1fr' :'1fr',
+        '1fr': '1fr',
         'auto-1fr': 'auto 1fr',
       },
     },

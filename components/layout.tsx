@@ -5,13 +5,11 @@ import { useLocale } from '@/lib/hooks'
 import theme from '@/lib/theme.preval'
 import React from 'react'
 
-
 export default function Layout({ children, pageProps }: any) {
-  
-  const { dir, locale } = useLocale()
+    const { dir, locale } = useLocale()
   return (
     <>
-      <div className="app-wrapper font-serif" dir={dir} >
+      <div className="app-wrapper font-serif" dir={dir}>
         <Header data={children.props.data} />
         <Main>{children}</Main>
         <Footer data={children.props.data} />
@@ -22,6 +20,7 @@ export default function Layout({ children, pageProps }: any) {
             min-height: 100% !important;
             height: 100%;
             //scrollbar-gutter: stable;
+            scroll-behavior: smooth;
           }
           body {
             min-height: 100% !important;
@@ -30,7 +29,7 @@ export default function Layout({ children, pageProps }: any) {
           #__next {
             min-height: -webkit-fill-available;
             height: 100%;
-                      }
+          }
           .app-wrapper {
             display: grid;
             flex-direction: column;

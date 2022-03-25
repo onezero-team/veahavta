@@ -7,7 +7,6 @@ import AboutTheClinic from '@/components/home-components/about-the-clinic'
 import ContactUs from '@/components/home-components/contact-us'
 import { HOMEPAGE_QUERY } from '@/components/types'
 
-
 export async function getStaticProps({ locale }: NextPageContext) {
   const data = await request({
     query: HOMEPAGE_QUERY(locale as string),
@@ -25,7 +24,6 @@ export default function Home({ data }: PageType) {
       <AboutTheClinic data={data} />
       <WhatWeDo data={data} />
       <ContactUs data={data} />
-      
     </>
   )
 }

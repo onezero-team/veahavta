@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Header({ data }: PageType) {
-  
   const { dir } = useLocale()
   return (
     <>
@@ -31,7 +30,7 @@ export default function Header({ data }: PageType) {
                 {data.common.appLinks.map((appLinks, key) => {
                   return (
                     <li className="text-2xl hidden md:block" key={key}>
-                      <Link href={`/${appLinks.relativeLink}`} >
+                      <Link href={`/${appLinks.relativeLink}`}>
                         <a>{appLinks.text}</a>
                       </Link>
                     </li>
