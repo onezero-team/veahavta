@@ -26,7 +26,7 @@ export default function ContactUsLink({
     <li className="">
       <Link href={type}>
         <a type={linkType} target="_blank" className="" rel="noreferrer">
-          <div className={className}>
+          <div className={`${className} justify-self-center`}>
             <img src={imagePath} alt={linkType} />
             <p className="text-base self-center">{text}</p>
           </div>

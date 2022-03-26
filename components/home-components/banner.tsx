@@ -20,7 +20,7 @@ export default function Banner({ data }: PageType) {
             </p>
             <Button
               className={
-                'text-xl font-bold bg-blue text-light px-8 py-2 rounded-full m-12 font-bold lg:text-2xl'
+                'text-xl font-bold bg-blue text-light px-8 py-2 rounded-full mt-12 md:m-12 font-bold lg:text-2xl'
               }
               type="button"
               text={data.homepage.getToKnowUsButton}

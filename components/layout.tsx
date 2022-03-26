@@ -6,7 +6,7 @@ import theme from '@/lib/theme.preval'
 import React from 'react'
 
 export default function Layout({ children, pageProps }: any) {
-  const { dir, locale } = useLocale()
+    const { dir, locale } = useLocale()
   return (
     <>
       <div className="app-wrapper font-serif" dir={dir}>
@@ -20,6 +20,7 @@ export default function Layout({ children, pageProps }: any) {
             min-height: 100% !important;
             height: 100%;
             //scrollbar-gutter: stable;
+            scroll-behavior: smooth;
           }
           body {
             min-height: 100% !important;

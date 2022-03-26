@@ -7,6 +7,7 @@ import ContactUsLinkList from '../data-components/contact-us-link-list'
 import ImgCircle from '../data-components/contact-us-img'
 
 export default function ContactUs({ data }: PageType) {
+  
   return (
     <section id="contact-us" className="relative overflow-hidden">
       <div className="hidden xl:block h-16 bg-brown-bg"></div>

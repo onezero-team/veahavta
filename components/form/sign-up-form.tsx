@@ -45,7 +45,7 @@ export default function SignupForm({ data }: PageType) {
       className={`w-full max-w-wrp bg-light shadow-4xl rounded-xl p-4 xl:place-self-auto xl:mt-[-100px] xl:mb-[20px] max-w-[650px]`}
     >
       <div className="p-2.5 md:p-5">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid frid-cols-1 md:grid-cols-2 gap-5">
           <Input
             label="firstName"
             text={data.common.contactUsFormFirstName}
@@ -81,7 +81,7 @@ export default function SignupForm({ data }: PageType) {
           text={data.common.contactUsFormMessage}
           formik={formik}
         />
-        {!success && (
+        <div className="grid place-items-center md:place-items-start">
           <Button
             className={
               'text-lg md:text-2xl font-bold bg-blue text-light px-8 py-2 rounded-full mt-10 font-bold mb-10'
@@ -89,12 +89,13 @@ export default function SignupForm({ data }: PageType) {
             type="submit"
             text={data.common.contactUsFormSendButton}
           />
-        )}
-        {success && (
-          <div className="text-lg md:text-2xl font-bold bg-success text-light px-8 py-2 rounded-full mt-10 font-bold mb-10 max-w-[150px] text-center">
-            form sent
-          </div>
-        )}
+
+          {success && (
+            <div className="text-lg md:text-xl font-bold bg-success text-light px-8 py-2 rounded-full mt-10 font-bold mb-10 max-w-[150px] text-center">
+              form sent
+            </div>
+          )}
+        </div>
       </div>
     </form>
   )
