@@ -91,7 +91,7 @@ export default function SignupForm({ data }: PageType) {
           />
 
           {success && (
-            <div className="text-lg md:text-xl font-bold bg-success text-light px-8 py-2 rounded-full mt-10 font-bold mb-10 max-w-[150px] text-center">
+            <div className="text-lg md:text-xl font-bold bg-light text-blue px-8 rounded-full mt-4 font-bold mb-10 max-w-[150px] text-center">
               form sent
             </div>
           )}
