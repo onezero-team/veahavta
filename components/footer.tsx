@@ -9,12 +9,14 @@ export default function Footer({ data }: PageType) {
   return (
     <WrapperLarge>
       <footer className="bg-light gap-6 grid md:grid-cols-2 lg:grid-cols-4 ">
-        <Image
-          src="/icons/veahavta-icon.svg"
-          height={'62px'}
-          width={'142px'}
-          alt="ואהבת לוגו"
-        />
+        <div className="justify-self-center">
+          <Image
+            src="/icons/veahavta-icon.svg"
+            height={'62px'}
+            width={'142px'}
+            alt="ואהבת לוגו"
+          />
+        </div>
         <FooterButtons data={data} />
         <FooterMenu data={data}></FooterMenu>
         <ContactUsFooterLinkList data={data} />
